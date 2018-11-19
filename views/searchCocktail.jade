@@ -12,19 +12,21 @@ html(lang="en")
     title Search Cocktail
 
   body
-      nav.navbar.navbar-expand-lg.navbar-light.bg-light
-       a.navbar-brand Let's Cook
-       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-        div(class="collapse navbar-collapse" id="navbar NavDropdown")
-            ul.navbar-nav
-              li.nav-item.active
-                a.nav-link(href='/') Home
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand Let's Cook
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+      div(class="collapse navbar-collapse" id="navbar NavDropdown")
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link(href='/') Home
+    br
     section(class="section")
       div(class="container")
         div(class="field")
           div(class="control")
               input(type="text", name="ricerca",class="form-control",placeholder="Ricerca cocktail")
+        br
         div(class="buttons")
           button(class="btn btn-ligth") Cerca
           button(class="btn btn-danger") Reset
