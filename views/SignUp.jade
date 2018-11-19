@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title SignUp
+
+    script(type='text/javascript', language='javascript').
+      function validaForm() {
+      if (document.registr.surname.value=="") {
+      alert("Enter surname");
+      return false;
+      }
+      if (document.registr.name.value=="") {
+      alert("Enter name");
+      return false;
+      }
+      if (document.registr.email.value=="") {
+      alert("Enter email");
+      return false;
+      }
+      if(document.registr.nickname.value==""){
+      alert("Enter nickname");
+      return false;
+      }
+      if(document.registr.password.value==""){
+      alert("Enter password");
+      return false;
+      }
+      alert("Datas entered correctly");
+      return true;
+      }
+    style.
+      body{
+      text-align: center;
+      float:center;
+      background-color:darksalmon;
+      }
+      h2{
+      text-align: center;
+      font-style: normal;
+      float:center;
+      background-color:rgb(199, 155, 137);
+      font-style:normal;
+      font-family:URW Chancery L, cursive;
+      }
+  body
+   form.form-horizontal
+  fieldset
+    .form-group
+      label.col-sm-2.col-lg-2.control-label(for='nome') Nome
+      .col-sm-5.col-lg-5
+        input#nome.form-control(type='text', placeholder='Inserisci il nome...')
+    .form-group
+      label.col-sm-2.col-lg-2.control-label(for='cognome') Cognome
+      .col-sm-5.col-lg-5
+        input#cognome.form-control(type='text', placeholder='Inserisci il cognome...')
+    .form-group
+      label.col-sm-2.col-lg-2.control-label(for='email') Email
+      .col-sm-5.col-lg-5
+        input#email.form-control(type='text', placeholder="Inserisci l'indirizzo email...")
+    .form-group
+      label.col-sm-2.col-lg-2.control-label(for='stato') Nazione
+      .col-sm-5.col-lg-5
+        select#stato.form-control
+          option Italia
+          option Francia
+          option Germania
+    .form-group
+      .col-sm-5.col-lg-5.col-sm-offset-2
+        .checkbox
+          label
+            input(type='checkbox')
+            |  Ricorda i miei dati
+    .form-group
+      .col-sm-5.col-lg-5.col-sm-offset-2
+        button.btn.btn-default(type='submit') Invia
+   
+    
