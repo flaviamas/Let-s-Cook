@@ -1,6 +1,48 @@
-extends layout
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='theme-color', content='#e9967a')
+    meta(name='description', content='This is a website about food and drinks recipes.')
+    meta(name='keywords', content='food, drinks')
+    meta(http-equiv='author', content='Flavia Masoni, Ilaria Ponzianelli')
+    meta(http-equiv='content-language', content='en')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    link(rel="stylesheet", href="/stylesheets/index.css")
+    title Ricette su cibo e cocktail
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+       a.navbar-brand(href='#') Let's Cook
+       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        div(class="collapse navbar-collapse" id="navbar NavDropdown")
+            ul.navbar-nav
+              li.nav-item.active
+                a.nav-link(href='#') Home 
+              li.nav-item
+                a.nav-link(href='#') SignIn
+              li.nav-item
+                a.nav-link(href='#') SignUp
+              li.nav-item
+                a.nav-link(href='#') AboutUs
 
-block content
-  h1= title
-  p Welcome to #{title}
-  a(href="./search") cerca
+    div(class="jumbotron text-center")
+      h1 LET'S COOK
+      h2 if food eat, else drink
+    div(class="box")
+      div(class="container text-center")
+        div(class="row")
+          div(class="col-sm")
+            a(class="button1", href="/search")
+              button(class="button1",href="/search")
+                h3 CIBO
+                img(src='/images/Hamburger.jpg',class="imgbtn")
+          div(class="col-sm")
+            a(class="button", href="/search")
+              button(class="button1")
+                h3 COCKTAIL
+                img(src='/images/cocktail1.jpg',class="imgbtn")
