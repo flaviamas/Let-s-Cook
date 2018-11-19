@@ -30,7 +30,7 @@ app.use("/search",searchRouter);
 app.use("/AboutUs",AboutUsRouter);
 app.use("/SignUp",SignUpRouter);
 app.use("/SignIn",SignInRouter);
-app.use("/searchCocktails",searchCocktails);
+app.use("/searchCocktail",searchCocktails);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

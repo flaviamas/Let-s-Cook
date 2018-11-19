@@ -1,5 +1,5 @@
 body {
-  background-color: #d9ecd0;
+  background-color: #f1ecce;
 }
 
 h1 {
@@ -18,28 +18,13 @@ h3 {
 }
 
 .jumbotron {
-  background-coloR:#b9b0b0;
-.button {
-  text-align: center;
-  box-align: center;
-  border: none;
+  background-coloR:#9fc2cc;
 }
 
-.btn-group {
-  text-align: right;
-  border: none;
+.btn {
+  background-color: #1b5299;
 }
 
-.button1 {
-  background-color: #f18973;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 8px;
-}
-.button2 {
-  background-color: #f18973;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 8px;
-}
 .pagination {
   float: right;
 }
