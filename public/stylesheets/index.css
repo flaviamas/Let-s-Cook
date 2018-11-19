@@ -1,0 +1,69 @@
+body {
+  background-color: #d9ecd0;
+}
+
+h1 {
+  font-style: italic;
+  font-family: URW Chancery L, cursive;
+}
+
+h2 {
+  font-style: italic;
+  font-family: Quick Brown Fox Jumps Over The Lazy Dog;
+}
+
+h3 {
+  font-style: normal;
+  font-family: URW Chancery L, cursive;
+}
+
+.jumbotron {
+  background-coloR:#b9b0b0;
+.button {
+  text-align: center;
+  box-align: center;
+  border: none;
+}
+
+.btn-group {
+  text-align: right;
+  border: none;
+}
+
+.button1 {
+  background-color: #f18973;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+}
+.button2 {
+  background-color: #f18973;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+}
+.pagination {
+  float: right;
+}
+
+.imgbtn{
+    padding: 16px;
+    border-radius: 8px;
+
+}
+div.box {
+  width: max-content !important;
+  width/**/: max-content;
+  height: max-content !important;
+  height/**/: max-content;
+  padding: 4px;
+  overflow: auto;
+}
+
+div.box2 {
+  width: fit-content !important;
+  width/**/: fit-content;
+  height: fit-content !important;
+  height/**/: fit-content;
+  padding: 40px;
+  box-align: center;
+  overflow: auto;
+}
