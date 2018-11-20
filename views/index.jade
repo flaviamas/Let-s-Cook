@@ -16,7 +16,7 @@ html
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Pacifico")
     title Ricette su cibo e cocktail
   body
-    nav.navbar.navbar-expand-lg.navbar-light.navbar-default
+    nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
        a.navbar-brand Let's Cook
        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
@@ -25,16 +25,53 @@ html
               li.nav-item.active
                 a.nav-link(href='Chat') Chat
               li.nav-item
-                a.nav-link(href='SignIn') SignIn
+                a.nav-link(href='AboutUs') AboutUs
               li.nav-item
                 a.nav-link(href='SignUp') SignUp
-              li.nav-item
-                a.nav-link(href='AboutUs') AboutUs
+              
+              li.dropdown
+                a.nav-link(href='#', data-toggle='dropdown') SignIn
+                  span.caret
+                ul#login-dp.dropdown-menu
+                  li
+                    .row
+                      .col-md-12
+                        | Login via
+                        .social-buttons
+                          a.btn.btn-fb(href='#')
+                            i.fa.fa-facebook
+                            |  Facebook
+                          a.btn.btn-tw(href='#')
+                            i.fa.fa-twitter
+                            |  Twitter
+                        |                                 or
+                        form#login-nav.form(role='form', method='post', action='login', accept-charset='UTF-8')
+                          .form-group
+                            label.sr-only(for='exampleInputEmail2') Email address
+                            input#exampleInputEmail2.form-control(type='email', placeholder='Email address', required='')
+                          .form-group
+                            label.sr-only(for='exampleInputPassword2') Password
+                            input#exampleInputPassword2.form-control(type='password', placeholder='Password', required='')
+                            .help-block.text-right
+                              a(href='') Forget the password ?
+                          .form-group
+                            button.btn.btn-primary.btn-block(type='submit') Sign in
+                          .checkbox
+                            label
+                              input(type='checkbox')
+                              |  keep me logged-in
+                      .bottom.text-center
+                        | New here ? 
+                        a(href='#')
+                          b Join Us
+              
+    
+    
     div(class="jumbotron text-center")
       div(class= "container")
         h1 LET'S COOK
         h3 if food eat, else drink
-        button(class="btn btn-light") About Us >> 
+        //button(class="btn btn-light") About Us >> 
     div(class="box")
       div(class="container text-center")
         div(class="row")

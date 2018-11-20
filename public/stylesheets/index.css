@@ -1,10 +1,10 @@
 body {
-  background-color: #fffcf2;
+  background-color: #f7f7f7;
 }
 
 /* navbar */
 .navbar-default {
-  background-color:#e8d2ae;
+  background-color:#454552;
   border-color: #E7E7E7;
 }
 h1 {
@@ -12,20 +12,21 @@ h1 {
 }
 
 h2 {
-  font-family: 'Pacifico', cursive;
+  font-style: italic;
+  font-family: Quick Brown Fox Jumps Over The Lazy Dog;
 }
 
 h3 {
-  font-family: 'Pacifico', cursive;
+  font-style: normal;
+  font-family: URW Chancery L, cursive;
 }
 
 .jumbotron {
-  background-coloR:#edb183;
-  padding: 5rem 2rem;
+  background-coloR:#ebd2b4;
 }
 
 .btn {
-  background-color: #e8d2ae;
+  background-color: #beb7df;
 }
 
 .pagination {
@@ -54,4 +55,59 @@ div.box2 {
   padding: 40px;
   box-align: center;
   overflow: auto;
+}
+
+
+
+/*logIn nella navbar*/
+
+#login-dp{
+  min-width: 250px;
+  padding: 14px 14px 0;
+  overflow:hidden;
+  background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+  font-size:12px    
+}
+#login-dp .bottom{
+  background-color:rgba(255,255,255,.8);
+  border-top:1px solid #ddd;
+  clear:both;
+  padding:14px;
+}
+#login-dp .social-buttons{
+  margin:12px 0    
+}
+#login-dp .social-buttons a{
+  width: 49%;
+}
+#login-dp .form-group {
+  margin-bottom: 10px;
+}
+.btn-fb{
+  color: #fff;
+  background-color:#3b5998;
+}
+.btn-fb:hover{
+  color: #fff;
+  background-color:#496ebc 
+}
+.btn-tw{
+  color: #fff;
+  background-color:#55acee;
+}
+.btn-tw:hover{
+  color: #fff;
+  background-color:#59b5fa;
+}
+@media(max-width:768px){
+  #login-dp{
+      background-color: inherit;
+      color: #fff;
+  }
+  #login-dp .bottom{
+      background-color: inherit;
+      border-top:0 none;
+  }
 }

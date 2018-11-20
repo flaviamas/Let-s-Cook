@@ -1,14 +1,56 @@
-
-body{
-    text-align: center;
+/* stile versione precedente*/
+/*body{
+    
     float:center;
     background-color:rgb(159, 155, 212);
 }
 h2{
-    text-align: center;
+    
     font-style: normal;
     float:center;
     background-color:rgb(167, 162, 161);
     font-style:normal;
     font-family:URW Chancery L, cursive;
+}*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+
+body {
+    background: rgb(192, 122, 122);
+	font-family: 'Roboto', sans-serif;
+	color:#333;
+	line-height: 22px;	
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	color:#111;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 1;
+    filter: alpha(opacity=1);    
+}
+
+.form-inline .form-group{
+    margin-left: 0;
+    margin-right: 0;
+}
+.control-label {
+    color:#333333;
+}
+
+.navbar {
+    background-color:#454552;
+    border-color: #E7E7E7;
+}
+    
