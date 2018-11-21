@@ -4,6 +4,8 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
+const apikey = "e6ad82b4";
+
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var searchRouter = require("./routes/search");
@@ -11,6 +13,7 @@ var SignUpRouter=  require("./routes/SignUp");
 var SignInRouter=  require("./routes/SignIn");
 var AboutUsRouter=  require("./routes/AboutUs");
 var searchCocktails = require("./routes/searchCocktail");
+var results=  require("./routes/results");
 
 var app = express();
 
@@ -31,6 +34,9 @@ app.use("/AboutUs",AboutUsRouter);
 app.use("/SignUp",SignUpRouter);
 app.use("/SignIn",SignInRouter);
 app.use("/searchCocktail",searchCocktails);
+app.use("/results",results);
+//richiesta delle api tramite la post
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
