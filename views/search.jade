@@ -20,16 +20,9 @@ html(lang="en")
             li.nav-item.active
               a.nav-link(href='/') Home
     br
-    section(class="section")
-      div(class="container")
-        div(class="field")
-          div(class="control")
-            input(type="text", name="ricerca",class="form-control",placeholder="Ricerca Cibo")
-        br
-        div(class="buttons")
-           a(class ="btn",href="/results") 
-              button(class="btn btn-light") search
-          button(class="btn btn-danger") Reset
-
+    form(action='/', method='post')
+        label.label(for='product_name') Enter name:
+        input.input#product_name(type='text', name='name_field', placeholder='Product name')
+        input.button(type='submit', value='Search')
 
    
