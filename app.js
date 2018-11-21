@@ -4,8 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-const apikey = "9f30fd6c33e0ab0ffcd0d2f1ae5c7099";
-const appid = "e6ad82b4";
+
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var searchRouter = require("./routes/search");
@@ -36,24 +35,7 @@ app.use("/SignIn",SignInRouter);
 app.use("/searchCocktail",searchCocktails);
 app.use("/results",results);
 
-app.get('/',function(req,res) {
-  res.render('/search',{recipe: null, error:null})
-});
 
-app.post('/',function(req,res){
-  let name = req.body.name_field;
-  let url ='https://api.edamam.com/search?q='+name+'&app_id='+appid+'&app_key='+apikey;
-   request(url,function(err,response,body){
-     if(err){
-       res.render('search',{recipe:null,error:'error, try with another ingredient'})
-     }
-     else {
-       let rec;
-     }
-
-   })
-
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
