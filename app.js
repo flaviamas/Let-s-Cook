@@ -38,7 +38,7 @@ app.use("/searchCocktail",searchCocktails);
 app.use("/results",results);
 
 app.get('/',function(req,res) {
-  res.render('/search',{recipe: null, error:null})
+  res.render('/results',{recipe: null, error:null})
 });
 
 app.post('/',function(req,res){
