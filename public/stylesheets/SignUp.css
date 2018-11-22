@@ -29,8 +29,8 @@ input.upload {
 }
 
 .form-inline .form-group{
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 30px;
+    margin-right: 50px;
 }
 
 .control-label {

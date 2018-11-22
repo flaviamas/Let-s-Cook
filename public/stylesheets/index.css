@@ -1,5 +1,6 @@
 body {
   background-color: #f7f7f7;
+  color: #ffffff;
 }
 
 /* navbar */
@@ -26,7 +27,7 @@ h3 {
 }
 
 .btn {
-  background-color: #beb7df;
+  background-color: #ba7ba1;
 }
 
 .pagination {
