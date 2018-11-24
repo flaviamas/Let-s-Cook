@@ -1,44 +1,46 @@
 body {
-    /*text-align:center;*/
-    background: rgb(191, 174, 221);
-	font-family: 'calibri', sans-serif;
-	color:#333;
-    line-height: 22px;	
+  /*text-align:center;*/
+  background: rgb(191, 174, 221);
+  font-family: "calibri", sans-serif;
+  color: #333;
+  line-height: 22px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 400;
-	color:#111;
-	margin-top:5px;
-    margin-bottom:5px;
-    text-align:center;    /* diventa centrale solo il titolo*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  color: #111;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center; /* diventa centrale solo il titolo*/
 }
 
 input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    cursor: pointer;
-    opacity: 1;
-    filter: alpha(opacity=1);  
-     
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 1;
+  filter: alpha(opacity=1);
 }
 
-.form-inline .form-group{
-    margin-left: 30px;
-    margin-right: 50px;
+.form-inline .form-group {
+  margin-left: 30px;
+  margin-right: 50px;
 }
 
 .control-label {
-    color:#333333;
+  color: #333333;
 }
-.label_001{
-
-	
-	color: #333;
-	font-style: normal;
+.label_001 {
+  color: #333;
+  font-style: normal;
 }

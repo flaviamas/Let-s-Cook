@@ -49,8 +49,7 @@ app.post('/',function(req,res){
        res.render('search',{recipe:null,error:'error, try with another ingredient'})
      }
      else {
-       res.json(response); //vede se la richiesta è andata a buon fine
-                          //res.render fa il rendere, res.json fa il render del json
+       res.json(response); //vede se la richiesta è andata a buon fine, res.render fa il rendere, res.json fa il render del json
      }
    })
 });
