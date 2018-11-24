@@ -3,18 +3,18 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-const request = require('request');
+const request = require("request");
 const apikey = "9f30fd6c33e0ab0ffcd0d2f1ae5c7099";
 const appid = "e6ad82b4";
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var searchRouter = require("./routes/search");
-var SignUpRouter=  require("./routes/SignUp");
-var SignInRouter=  require("./routes/SignIn");
-var AboutUsRouter=  require("./routes/AboutUs");
-var searchCocktails = require("./routes/searchCocktail");
-var results=  require("./routes/results");
+var SignUpRouter = require("./routes/signup");
+var SignInRouter = require("./routes/signIn");
+var AboutUsRouter = require("./routes/aboutus");
+var searchCocktails = require("./routes/searchcocktail");
+var results = require("./routes/results");
 
 var app = express();
 
@@ -30,28 +30,38 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/search",searchRouter);
-app.use("/AboutUs",AboutUsRouter);
-app.use("/SignUp",SignUpRouter);
-app.use("/SignIn",SignInRouter);
-app.use("/searchCocktail",searchCocktails);
-app.use("/results",results);
+app.use("/search", searchRouter);
+app.use("/AboutUs", AboutUsRouter);
+app.use("/SignUp", SignUpRouter);
+app.use("/SignIn", SignInRouter);
+app.use("/searchCocktail", searchCocktails);
+app.use("/results", results);
 
-app.get('/',function(req,res) {
-  res.render('/results',{recipe: null, error:null})
+app.get("/", function(req, res) {
+  res.render("/results", { recipe: null, error: null });
 });
 
-app.post('/',function(req,res){
+app.post("/", function(req, res) {
   let name = req.body.name_field;
-  let url ='https://api.edamam.com/search?q='+name+'&app_id='+appid+'&app_key='+apikey;
-   request(url,function(err,response,body){
-     if(err){
-       res.render('search',{recipe:null,error:'error, try with another ingredient'})
-     }
-     else {
-       res.json(response); //vede se la richiesta è andata a buon fine, res.render fa il rendere, res.json fa il render del json
-     }
-   })
+  let url =
+    "https://api.edamam.com/search?q=" +
+    name +
+    "&app_id=" +
+    appid +
+    "&app_key=" +
+    apikey;
+  request(url, function(err, response, body) {
+    if (err) {
+      res.render("search", {
+        recipe: null,
+        error: "error, try with another ingredient"
+      });
+    } else {
+      let fileJson = JSON.parse(body);
+      res.render("results", { jsonfile: fileJson });
+      //res.json(fileJson); //vede se la richiesta è andata a buon fine, res.render fa il rendere, res.json fa il render del json
+    }
+  });
 });
 
 // catch 404 and forward to error handler
