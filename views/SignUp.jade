@@ -13,8 +13,7 @@ html
     //link#bootstrap-css(href='../css/bootstrap.min.css', rel='stylesheet')
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 
-  body 
-     
+  body(background:"ibrahim-rifath-769913-unsplash.jpg" )
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       a.navbar-brand Let's Cook
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
@@ -42,7 +41,7 @@ margin: 0 auto;')
                   .input-group
                     span.input-group-addon
                       i.glyphicon.glyphicon-envelope
-                    input#emailid.form-control(type='email', name='emailid', placeholder='Enter your Email ID', value='')
+                    input#emailid.form-control(required, type='email', name='emailid', placeholder='Enter your Email ID', value='')
                   small  Your Email will also be used as your username 
               .form-group
                 label.control-label.col-sm-3
@@ -52,7 +51,7 @@ margin: 0 auto;')
                   .input-group
                     span.input-group-addon
                       i.glyphicon.glyphicon-lock
-                    input#password.form-control(type='password', name='password', placeholder='Choose password (5-15 chars)', value='')
+                    input#password.form-control(required, type='password', name='password', placeholder='Choose password (5-15 chars)', value='')
               .form-group
                 label.control-label.col-sm-3
                   | Confirm Password 
@@ -61,20 +60,20 @@ margin: 0 auto;')
                   .input-group
                     span.input-group-addon
                       i.glyphicon.glyphicon-lock
-                    input#cpassword.form-control(type='password', name='cpassword', placeholder='Confirm your password', value='')
+                    input#cpassword.form-control(required, type='password', name='cpassword', placeholder='Confirm your password', value='')
               
               .form-group
                 label.control-label.col-sm-3
                   | First Name 
                   span.text-danger *
                 .col-md-6.col-sm-7
-                  input#mem_name.form-control(type='text', name='mem_name', placeholder='Enter your First Name here', value='')
+                  input#mem_name.form-control(required, type='text', name='mem_name', placeholder='Enter your First Name here', value='')
               .form-group
                 label.control-label.col-sm-3
                   | Last Name 
                   span.text-danger *
                 .col-md-6.col-sm-7
-                  input#mem_name.form-control(type='text', name='mem_name', placeholder='Enter your Last Name here', value='')
+                  input#mem_name.form-control(required, type='text', name='mem_name', placeholder='Enter your Last Name here', value='')
               
               .form-group.label_001
                 .col-md-6.col-sm-7

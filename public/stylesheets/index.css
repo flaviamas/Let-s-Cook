@@ -10,6 +10,7 @@ body {
 }
 h1 {
   font-family: 'Pacifico', cursive;
+  color: #454552;
 }
 
 h2 {
@@ -20,6 +21,7 @@ h2 {
 h3 {
   font-style: normal;
   font-family: URW Chancery L, cursive;
+  color: #454552;
 }
 
 .jumbotron {

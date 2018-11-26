@@ -49,11 +49,11 @@ html
                         form#login-nav.form(role='form', method='post', action='login', accept-charset='UTF-8')
                           .form-group
                             label.sr-only(for='exampleInputEmail2') Email address
-                            input#exampleInputEmail2.form-control(type='email', placeholder='Email address', required='')
+                            input#exampleInputEmail2.form-control(type='email', placeholder='Email address', required)
                           .form-group
                             label.sr-only(for='exampleInputPassword2') Password
-                            input#exampleInputPassword2.form-control(type='password', placeholder='Password', required='')
-                            .help-block.text-right
+                            input#exampleInputPassword2.form-control(type='password', placeholder='Password', required)
+                            //.help-block.text-right
                               a(href='') Forget the password ?
                           .form-group
                             button.btn.btn-primary.btn-block(type='submit') Sign in
@@ -63,12 +63,12 @@ html
                               |  keep me logged-in
                       .bottom.text-center
                         | New here ? 
-                        a(href='#')
+                        a(href='SignUp')
                           b Join Us    
                           
     div(class="jumbotron text-center")
       div(class= "container")
-        h1 LET'S COOK
+        h1 LET'S COOK 
         h3 if food eat, else drink
         //button(class="btn btn-light") About Us >> 
     div(class="box")
