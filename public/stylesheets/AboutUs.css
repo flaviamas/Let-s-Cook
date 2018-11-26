@@ -1,12 +1,26 @@
 body{
-    background-color:rgb(205, 235, 180);
+    /*background-color:rgb(205, 235, 180);*/
 }
 h2{
-    background-color:rgb(204, 135, 108);
+    /*background-color:rgb(204, 135, 108);*/
+    text-align:center;
     font-style:normal;
     font-family:URW Chancery L, cursive;
 }
 h3{
     font-style:normal;
     font-family:URW Chancery L, cursive;
+}
+
+img.bg {
+    /* regole per riempire la pagina con lo sfondo prescelto */
+        min-height: 100%;
+        min-width: 1024px;
+    /* regole per ridimensionare l'immagine proporzionalmente */
+       width: 100%;
+       height: auto;
+    /* posizonamento dello sfondo */
+       position: fixed;
+       top: 0;
+       left: 0;
 }

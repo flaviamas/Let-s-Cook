@@ -1,6 +1,6 @@
 body {
   background-color: #f7f7f7;
-  color: #ffffff;
+  color: black;
 }
 
 /* navbar */
@@ -9,7 +9,7 @@ body {
   border-color: #E7E7E7;
 }
 h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: 'pacifico', cursive;
   color: #454552;
 }
 
@@ -20,7 +20,7 @@ h2 {
 
 h3 {
   font-style: normal;
-  font-family: URW Chancery L, cursive;
+  font-family: 'pacifico' , cursive;
   color: #454552;
 }
 
@@ -30,6 +30,7 @@ h3 {
 
 .btn {
   background-color: #ba7ba1;
+  border-radius: 20px;
 }
 
 .pagination {
@@ -38,7 +39,7 @@ h3 {
 
 .imgbtn{
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 15px;
 
 }
 div.box {
@@ -113,4 +114,8 @@ div.box2 {
       background-color: inherit;
       border-top:0 none;
   }
+}
+
+.container.contentinfo{
+  background-color:#454552;
 }

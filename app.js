@@ -15,6 +15,8 @@ var SignInRouter = require("./routes/signIn");
 var AboutUsRouter = require("./routes/aboutus");
 var searchCocktails = require("./routes/searchcocktail");
 var results = require("./routes/results");
+var contactUs= require("./routes/contactUs");
+var privacy = require("./routes/privacy");
 
 var app = express();
 
@@ -36,6 +38,10 @@ app.use("/SignUp", SignUpRouter);
 app.use("/SignIn", SignInRouter);
 app.use("/searchCocktail", searchCocktails);
 app.use("/results", results);
+app.use("/contactUs", contactUs);
+app.use("/privacy", privacy);
+
+
 
 app.get("/", function(req, res) {
   res.render("/results", { recipe: null, error: null });

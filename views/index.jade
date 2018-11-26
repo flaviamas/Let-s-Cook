@@ -10,6 +10,9 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1') 
     link(rel='stylesheet', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    
+    link(href="https://fonts.googleapis.com/css?family=Atma|Courgette|Kalam|Schoolbell", rel="stylesheet")
+
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
     link(rel="stylesheet", href="/stylesheets/index.css")
@@ -84,3 +87,21 @@ html
               button(class="btn")
                 h3 COCKTAIL
                 img(src='/images/drink2.jpg',class="imgbtn")
+    
+    .footer.container-lg.px-3(role='contentinfo')
+      .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light
+        ul.list-style-none.d-flex.flex-wrap
+            li.mr-3
+              span(title='0.37980s from unicorn-7b444b594b-twlsg') © 2018 Let's cook
+            li.mr-3
+              a(data-ga-click='Footer, go to Privacy, text:Privacy', href='Privacy') Privacy
+
+            li.mr-3
+              a(data-ga-click='Footer, go to ContactUs, text:ContactUs', href='ContactUs') ContactUs
+            li.mr-3
+              a(href='https://blog.github.com', data-ga-click='Footer, go to blog, text:blog') Blog
+            li
+              a(data-ga-click='Footer, go to AboutUs, text:AboutUs', href='AboutUs') AboutUs
+          .d-flex.flex-justify-center.pb-6
+            span.f6.text-gray-light
+
