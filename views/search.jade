@@ -19,10 +19,10 @@ html(lang="en")
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
-    br
-    form(action='/', method='post')
-        label.label(for='product_name') Enter name:
-        input.input#product_name(type='text', name='name_field', placeholder='Product name')
-        input.button(class = 'btn',type='submit', value='Search')
+    div(class = "searchbar")
+      form(action='/', method='post')
+          label.label(for='product_name', class ="Label") Enter name : 
+          input.input#product_name(type='text', name='name_field', placeholder='Product name')
+          input(class = 'btn',type='submit', value='Search')
 
-   
+    

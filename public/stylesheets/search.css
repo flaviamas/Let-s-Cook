@@ -17,3 +17,18 @@ body{
     background-color:#e8d2ae;
     border-color: #E7E7E7;
   }
+.searchbar{
+    margin-top: 5%;
+    margin-left: 15%;
+}
+.label{
+    margin-top:5%;
+    margin-right: 2%;
+}
+.input-group-text{
+    width:  50%;
+    height: 4%;
+}
+.btn{
+    height: 4%;
+}
