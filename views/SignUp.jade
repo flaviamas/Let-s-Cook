@@ -12,6 +12,7 @@ html
     title SignUp
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 
+
   body
     img(src="/images/arancia.jpg", class="bg")
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
@@ -22,16 +23,16 @@ html
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
+    
     .container
       .row
         .col-md-9
           section
             h1
               span Sign Up
-            .row(style='float: none;\
-margin: 0 auto;')
+            .row(style='float: none; margin: 0 auto;')
             br
-            form#signup.form-horizontal(method='post', name='signup', enctype='multipart/form-data')
+            form#signup.form-horizontal(method='post', name='signup', enctype='multipart/form-data', onSubmit='return validaForm();')
               .form-group
                 label.control-label.col-sm-3
                   | Email
@@ -90,9 +91,29 @@ margin: 0 auto;')
 
               .form-group
                 label.control-label.col-sm-3
-
+              .col-sm-9
+                span.help-block
+                  | By clicking Sign Up, you agree to our Terms and that you have read the privacy document.
+              br
               .form-group
                 .col-md-6.col-sm-7
                   input.btn.btn-primary(name='Submit', type='submit', value='Sign Up' )
+
+     
+  .footer.container-lg.px-3(role='contentinfo',class = 'foot')
+    .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light
+      ul.d-flex.flex-wrap.list-unstyled
+          li.mr-3
+            span(title='0.37980s from unicorn-7b444b594b-twlsg') © 2018 Let's cook
+          li.mr-3
+            a(href='Privacy') Privacy
+          li.mr-3
+            a(href='ContactUs') ContactUs
+          li.mr-3
+            a(href='https://blog.github.com') Blog
+          li
+            a(href='AboutUs') AboutUs
+        .d-flex.flex-justify-center.pb-6
+          span.f6.text-gray-light
 
         

@@ -12,6 +12,18 @@ img.bg {
        left: 0;
 }
 
-h2,h3{
+h1,h2{
     font-family: 'indie flower';
 }
+
+
+
+.foot{
+    margin-bottom: 0%;
+    margin-top: 20%;
+  }
+  
+  .container.contentinfo{
+    background-color:#454552;
+  }
+  
