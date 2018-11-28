@@ -21,8 +21,7 @@ html(lang="en")
               a.nav-link(href='/') Home
     div(class = "searchbar")
       form(action='/', method='post')
-          label.label(for='product_name', class ="Label") Enter name : 
-          input.input#product_name(type='text', name='name_field', placeholder='Product name')
+          input#product_name(type='text',class='search', name='name_field', placeholder='Product name')
           input(class = 'btn',type='submit', value='Search')
 
     

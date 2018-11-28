@@ -115,6 +115,10 @@ div.box2 {
       border-top:0 none;
   }
 }
+.foot{
+  margin-bottom: 0%;
+  margin-top: 20%;
+}
 
 .container.contentinfo{
   background-color:#454552;

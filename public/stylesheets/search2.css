@@ -1,7 +1,19 @@
 body{
-    background-color: #edb183;
+    background-color: #f5b784;
 }
 .navbar-default {
-    background-color:#e8d2ae;
-    border-color: #E7E7E7;
+    background-color:#f7f7f7;
+ 
   }
+.searchbar{
+    margin-top: 5%;
+    margin-left: 15%;
+    border-radius: 3%;
+}
+.label{
+    margin-top:5%;
+    margin-right: 2%;
+}
+.search{
+    width:  70%;
+}

@@ -88,20 +88,19 @@ html
                 h3 COCKTAIL
                 img(src='/images/drink2.jpg',class="imgbtn")
     
-    .footer.container-lg.px-3(role='contentinfo')
+    .footer.container-lg.px-3(role='contentinfo',class = 'foot')
       .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light
-        ul.list-style-none.d-flex.flex-wrap
+        ul.d-flex.flex-wrap.list-unstyled
             li.mr-3
               span(title='0.37980s from unicorn-7b444b594b-twlsg') © 2018 Let's cook
             li.mr-3
-              a(data-ga-click='Footer, go to Privacy, text:Privacy', href='Privacy') Privacy
-
+              a(href='Privacy') Privacy
             li.mr-3
-              a(data-ga-click='Footer, go to ContactUs, text:ContactUs', href='ContactUs') ContactUs
+              a(href='ContactUs') ContactUs
             li.mr-3
-              a(href='https://blog.github.com', data-ga-click='Footer, go to blog, text:blog') Blog
+              a(href='https://blog.github.com') Blog
             li
-              a(data-ga-click='Footer, go to AboutUs, text:AboutUs', href='AboutUs') AboutUs
+              a(href='AboutUs') AboutUs
           .d-flex.flex-justify-center.pb-6
             span.f6.text-gray-light
 
