@@ -1,0 +1,27 @@
+body {
+
+  font-family: "calibri", sans-serif;
+  color: #333;
+  line-height: 22px;
+  background-color: rgb(248, 248, 248);  
+  
+}
+
+img.bg {
+/* regole per riempire la pagina con lo sfondo prescelto */
+    min-height: 100%;
+    min-width: 1024px;
+/* regole per ridimensionare l'immagine proporzionalmente */
+    width: 100%;
+    height: auto;
+/* posizonamento dello sfondo */
+    position: fixed;
+    top: 0;
+    left:40%;
+}
+
+h2,h3{
+    font-family: 'indie flower';
+    color: black;
+}
+

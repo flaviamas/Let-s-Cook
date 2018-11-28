@@ -1,14 +1,50 @@
+doctype html
 html
   head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel='stylesheet', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    link(href="https://fonts.googleapis.com/css?family=Pacifico|Atma|Courgette|Kalam|Schoolbell", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Mono", rel="stylesheet") 
+    link(href="https://fonts.googleapis.com/css?family=Indie+Flower|Sedgwick+Ave", rel="stylesheet")
 
-    body
-      h1 privacy
+    link(rel="stylesheet", href="/stylesheets/Privacy.css")
+    title Privacy
 
-p(Thanks for entrusting Let's cook with your comments, your recipes and your personal information.
 
-We only collect the information you choose to give us, and we process it with your consent,
-or on another legal basis; we only require the minimum amount of personal information that is necessary 
-to fulfill the purpose of your interaction with us; we don't sell it to third parties; 
-and we only use it as this Privacy Statement describes. No matter where you are, where you live, or 
-what your citizenship is, we provide the same standard of privacy protection to all our
-users around the world, regardless of their country of origin or location.)
+  body
+    //immagine di sfondo
+    img(src="/images/arancia_2.jpg", class="bg")     
+ 
+    //navbar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand Let's Cook
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+      div(class="collapse navbar-collapse" id="navbar NavDropdown")
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link(href='/') Home
+    
+    .row
+      .col-md-1
+      .col-md-7
+        br
+        br
+        br
+        h2 PRIVACY
+        br
+        h3 
+          | Thanks for entrusting Let's cook with your comments, your recipes and your personal information.
+          br
+          br
+          | We only collect the information you choose to give us, and we process it with your consent,
+          | or on another legal basis; we only require the minimum amount of personal information that is necessary 
+          | to fulfill the purpose of your interaction with us; we don't sell it to third parties; 
+          | and we only use it as this Privacy Statement describes. No matter where you are, where you live, or 
+          | what your citizenship is, we provide the same standard of privacy protection to all our
+          | users around the world, regardless of their country of origin or location.

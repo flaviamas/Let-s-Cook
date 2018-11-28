@@ -11,7 +11,6 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var searchRouter = require("./routes/search");
 var SignUpRouter = require("./routes/signup");
-var SignInRouter = require("./routes/signIn");
 var AboutUsRouter = require("./routes/aboutus");
 var searchCocktails = require("./routes/searchcocktail");
 var results = require("./routes/results");
@@ -35,11 +34,10 @@ app.use("/users", usersRouter);
 app.use("/search", searchRouter);
 app.use("/AboutUs", AboutUsRouter);
 app.use("/SignUp", SignUpRouter);
-app.use("/SignIn", SignInRouter);
 app.use("/searchCocktail", searchCocktails);
 app.use("/results", results);
-app.use("/contactUs", contactUs);
-app.use("/privacy", privacy);
+app.use("/ContactUs", contactUs);
+app.use("/Privacy", privacy);
 
 
 

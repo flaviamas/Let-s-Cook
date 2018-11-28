@@ -1,7 +1,44 @@
 doctype html
 html
-    body
-        h1 contact us
-        h2 contact us for more information!  
-        h3 fl.mas@gmail
-        h3 ip.pon@gmail
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel='stylesheet', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    link(href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Atma|Courgette|Kalam|Schoolbell", rel="stylesheet")
+
+    link(rel="stylesheet", href="/stylesheets/ContactUs.css")
+    title ContactUs
+
+  body
+    img(src="/images/fragole.jpg", class="bg")
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+       a.navbar-brand Let's Cook
+       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        div(class="collapse navbar-collapse" id="navbar NavDropdown")
+            ul.navbar-nav
+              li.nav-item.active
+                a.nav-link(href='/') Home
+
+    .container
+        .row
+            .col-md-5
+            .col-md-7
+                br
+                br
+                br
+                h2 CONTACT US
+                br
+                h3 Please, contact us for more information! 
+                br
+                .row
+                    .col-md-2
+                    .col-md-2
+                        h3 fl.mas@gmail
+                    .col-md-2
+                    .col-md-2
+                        h3 ip.pon@gmail
