@@ -20,6 +20,8 @@ html(lang="en")
             li.nav-item.active
               a.nav-link(href='/') Home
     h1 Ricetta 1
-      - var fileJson = jsonfile["hits"][i]["recipe"]["label"];
+      - var fileJson = jsonfile["hits"][0]["recipe"]["label"];
+      - var img = jsonfile["hits"][0]["recipe"]["image"];
       p(class='ricetta') #{fileJson} 
+      img(src = img)
 
