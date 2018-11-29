@@ -7,3 +7,20 @@ router.get("/", function(req, res, next) {
 });
 
 module.exports = router;
+
+function validaForm(){
+  if (document.signup.password.value.length<5){
+    alert("password too short");
+    return false;
+  }
+  if(document.signup.cpassword.value.length<5){
+    alert("password too short");
+    return false;
+  }
+  if(document.signup.cpassword.value != document.signup.password.value){
+    alert("different password,please enter the same password");
+    return false;
+  }
+  return true;
+}
+
