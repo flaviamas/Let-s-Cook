@@ -19,9 +19,9 @@ html(lang="en")
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
-    div(class = "searchbar")
+    div()
       form(action='/', method='post')
-          input#product_name(type='text',class='search', name='name_field', placeholder='Product name')
+          input.search#product_name(type='text',class= "shadow ", name='name_field', placeholder='Product name')
           input(class = 'btn',type='submit', value='Search')
 
     
