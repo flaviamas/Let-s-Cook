@@ -5,11 +5,11 @@ body {
 
 /* navbar */
 .navbar-default {
-  background-color:#454552;
-  border-color: #E7E7E7;
+  background-color: #454552;
+  border-color: #e7e7e7;
 }
 h1 {
-  font-family: 'indie-flower', cursive;
+  font-family: "indie-flower", cursive;
   color: #454552;
 }
 
@@ -20,12 +20,12 @@ h2 {
 
 h3 {
   font-style: normal;
-  font-family: 'indie-flower' , cursive;
+  font-family: "indie-flower", cursive;
   color: #454552;
 }
 
 .jumbotron {
-  background-color:#ebd2b4;
+  background-color: #ebd2b4;
 }
 
 .btn {
@@ -37,10 +37,9 @@ h3 {
   float: right;
 }
 
-.imgbtn{
-    padding: 16px;
-    border-radius: 15px;
-
+.imgbtn {
+  padding: 16px;
+  border-radius: 15px;
 }
 div.box {
   width: max-content !important;
@@ -61,65 +60,69 @@ div.box2 {
   overflow: auto;
 }
 
-
-
 /*logIn nella navbar*/
 
-#login-dp{
+#login-dp {
   min-width: 250px;
   padding: 14px 14px 0;
-  overflow:hidden;
-  background-color:rgba(255,255,255,.8);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
 }
-#login-dp .help-block{
-  font-size:12px    
+#login-dp .help-block {
+  font-size: 12px;
 }
-#login-dp .bottom{
-  background-color:rgba(255,255,255,.8);
-  border-top:1px solid #ddd;
-  clear:both;
-  padding:14px;
+#login-dp .bottom {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #ddd;
+  clear: both;
+  padding: 14px;
 }
-#login-dp .social-buttons{
-  margin:12px 0    
+#login-dp .social-buttons {
+  margin: 12px 0;
 }
-#login-dp .social-buttons a{
+#login-dp .social-buttons a {
   width: 49%;
 }
 #login-dp .form-group {
   margin-bottom: 10px;
 }
-.btn-fb{
+.btn-fb {
   color: #fff;
-  background-color:#3b5998;
+  background-color: #3b5998;
 }
-.btn-fb:hover{
+.btn-fb:hover {
   color: #fff;
-  background-color:#496ebc 
+  background-color: #496ebc;
 }
-.btn-tw{
+.btn-tw {
   color: #fff;
-  background-color:#55acee;
+  background-color: #55acee;
 }
-.btn-tw:hover{
+.btn-tw:hover {
   color: #fff;
-  background-color:#59b5fa;
+  background-color: #59b5fa;
 }
-@media(max-width:768px){
-  #login-dp{
-      background-color: inherit;
-      color: #fff;
+@media (max-width: 768px) {
+  #login-dp {
+    background-color: inherit;
+    color: #fff;
   }
-  #login-dp .bottom{
-      background-color: inherit;
-      border-top:0 none;
+  #login-dp .bottom {
+    background-color: inherit;
+    border-top: 0 none;
   }
 }
-.foot{
+.foot {
   margin-bottom: 0%;
   margin-top: 20%;
 }
 
-.container.contentinfo{
-  background-color:#454552;
+.container.contentinfo {
+  background-color: #454552;
+}
+
+#bottonehome:hover {
+  -webkit-box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.75);
+  -box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.75);
 }

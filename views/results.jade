@@ -19,9 +19,15 @@ html(lang="en")
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
-    h1 Ricetta 1
-      - var fileJson = jsonfile["hits"][0]["recipe"]["label"];
-      - var img = jsonfile["hits"][0]["recipe"]["image"];
-      p(class='ricetta') #{fileJson} 
+    h1 Ricetta 
+    - var x = jsonfile["to"];
+    - console.log(x);
+    -for(i = 0; i < x; i++)
+      - var fileJson = jsonfile["hits"][i]["recipe"]["label"];
+      - var img = jsonfile["hits"][i]["recipe"]["image"];
+      - var link = jsonfile["hits"][i]["recipe"]["url"];
+      a(href=link,class='ricetta') #{fileJson} 
       img(src = img)
+
+
 

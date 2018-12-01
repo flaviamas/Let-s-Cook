@@ -20,7 +20,7 @@ html(lang="en")
             li.nav-item.active
               a.nav-link(href='/') Home
     div()
-      form(action='/', method='post')
+      form(action='/search', method='post')
           input.search#product_name(type='text',class= "shadow ", name='name_field', placeholder='Product name')
           input(class = 'btn',type='submit', value='Search')
 
