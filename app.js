@@ -13,6 +13,7 @@ var searchCocktails = require("./routes/searchcocktail");
 var results = require("./routes/results");
 var contactUs= require("./routes/contactUs");
 var privacy = require("./routes/privacy");
+var resultscocktail = require("./routes/resultscocktail");
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use("/searchCocktail", searchCocktails);
 app.use("/results", results);
 app.use("/ContactUs", contactUs);
 app.use("/Privacy", privacy);
+app.use("/resultscocktail", resultscocktail);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

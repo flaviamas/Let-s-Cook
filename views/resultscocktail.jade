@@ -19,29 +19,6 @@ html(lang="en")
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
-    h1 Ricetta 
-    - var x = jsonfile["to"];
-    - console.log(x);
-    -for(i = 0; i+3 < x; i+=3)
-      - var fileJson1 = jsonfile["hits"][i]["recipe"]["label"];
-      - var img1 = jsonfile["hits"][i]["recipe"]["image"];
-      - var link1 = jsonfile["hits"][i]["recipe"]["url"];
-      - var fileJson2 = jsonfile["hits"][i+1]["recipe"]["label"];
-      - var img2 = jsonfile["hits"][i+1]["recipe"]["image"];
-      - var link2 = jsonfile["hits"][i+1]["recipe"]["url"];
-      - var fileJson3 = jsonfile["hits"][i+2]["recipe"]["label"];
-      - var img3 = jsonfile["hits"][i+2]["recipe"]["image"];
-      - var link3 = jsonfile["hits"][i+2]["recipe"]["url"];
-      .container
-        .row
-          .col-sm
-          img(src = img1)
-          a(href=link1,class='ricetta') #{fileJson1}
-          .col-sm
-          img(src = img2)
-          a(href=link2,class='ricetta') #{fileJson2}
-          .col-sm
-          img(src = img3)
-          a(href=link3,class='ricetta') #{fileJson3}
-          
-
+    - var fileJson = jsonfile['drinks'][0]['strDrink'];
+    -console.log(fileJson);
+    p(class='cocktail') #{fileJson}
