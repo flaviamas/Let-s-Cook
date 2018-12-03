@@ -122,7 +122,7 @@ div.box2 {
 }
 
 #bottonehome:hover {
-  -webkit-box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.75);
-  -box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 10px 7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:  7px 10px 7px rgba(0, 0, 0, 0.75);
+  -box-shadow: 7px 7px 10px 7px rgba(0, 0, 0, 0.75);
 }
