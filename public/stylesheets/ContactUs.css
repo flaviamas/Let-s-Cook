@@ -10,6 +10,8 @@ img.bg {
        position: fixed;
        top: 0;
        left: 0;
+    /*opacita sfondo */
+    opacity: 0.6;
 }
 
 h1,h2{
