@@ -1,6 +1,4 @@
-body{
-    /*background-color:rgb(205, 235, 180);*/
-}
+
 h2{
     /*background-color:rgb(204, 135, 108);*/
     text-align:center;
@@ -24,3 +22,14 @@ img.bg {
        top: 0;
        left: 0;
 }
+
+
+.foot{
+    margin-bottom: 0%;
+    margin-top: 20%;
+  }
+  
+  .container.contentinfo{
+    background-color:#454552;
+  }
+
