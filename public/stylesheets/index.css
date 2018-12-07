@@ -1,6 +1,6 @@
 
 body {
-  background-color: #eaf2f6;
+  background-color: #f7f7f7;
   color: black;
 }
 h5{
@@ -12,7 +12,7 @@ h5{
 
 /* navbar */
 .navbar-default {
-  background-color: #191d24;
+  background-color: #333841;
   border-color: #e7e7e7;
 }
 h1 {
@@ -95,11 +95,18 @@ h1 {
   margin-bottom: 0%;
   margin-top: 20%;
 }
-
+/*carosello*/
 .carousel{
   margin-left: 30%;
   margin-right: 30%;
   margin-top: 3%;
+
+}
+.carousel-inner .item img{
+  width: 800px;
+  height: 480px;
+
+
 }
 
 .container.contentinfo {
