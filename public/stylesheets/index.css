@@ -3,12 +3,7 @@ body {
   background-color: #f7f7f7;
   color: black;
 }
-h5{
-  color: #fff;
-  display: inline-block;
-  margin-right: 40%;
-  padding: 1%;
-}
+
 
 /* navbar */
 .navbar-default {
@@ -23,13 +18,27 @@ h1 {
   text-align: center;
   width: 98%;
 }
+
+/*barra separatrice*/
  .text-separator{
   background-color: #454552;
-  height: 5%;
+  height: 44px;
   margin-top: 2%;
-  width: 50%;
+  width: 1040px;
   margin-left: 20%;
+  text-align: center;
  }
+ h5{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  padding: .5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 27px;
+  color: white;
+}
 
 
 .pagination {
