@@ -8,10 +8,10 @@ html
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
 
-    link(rel='stylesheet' type="text/css" href="/stylesheets/SignUp.css")
+    link(rel='stylesheet' type="text/css", href="/stylesheets/SignUp.css")
     title SignUp
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-    script(src='/javascript/SignUp.js' type="text/javascript")
+    script(src="/javascript/SignUp.js", type="text/javascript")
 
 
   body
@@ -33,7 +33,7 @@ html
               span SIGN UP
             .row(style='float: none; margin: 0 auto;')
             br
-            form#signup.form-horizontal(method='post', name='signup', enctype='multipart/form-data', onSubmit='return validaForm()')
+            form#signup.form-horizontal(method='post', action='/', name='sign_up', onSubmit='return validaForm()')
               .form-group
                 label.control-label.col-sm-3
                   | Email
