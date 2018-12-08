@@ -11,8 +11,10 @@ body {
   border-color: #e7e7e7;
 }
 h1 {
-  font-family: "indie-flower", cursive;
+  font-family: "Fira Sans", sans-serif;
   color: #454552;
+  margin-top: 3%;
+  font-size: 300%;
 }
 .container{
   text-align: center;
@@ -127,11 +129,7 @@ h1 {
 .imglogo{
   size: 2000%;
 }
-p{
-   font-family: 'Croissant One', cursive;
-  margin-top: 3%;
-  font-size: 300%;
-}
+
 .wrapper{
   margin-bottom: 2%;
 }
