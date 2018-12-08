@@ -9,34 +9,57 @@ html.
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Bangers|Croissant+One|Fredoka+One|Kavoon|Slabo+27px|Varela+Round" rel="stylesheet"> 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"> </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Croissant+One|Fredoka+One|Kavoon|Slabo+27px|Varela+Round" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"> </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" ></script>
     <link rel="stylesheet" href="/stylesheets/index.css" />
     <title>Food and cocktails recipes</title>
   </head>
+ 
   <body data-gr-c-s-loaded="true">
+    
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '2187230971337859',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.2'
+        });
+
+        FB.getLoginStatus(function(response){
+          statusChangeCallback(response);
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      function statusChangeCallback(response){
+        if(response.status==='connected'){
+          console.log('Logged in and authenticated');
+        }else{
+          console.log('Not authenticated');
+        }
+      }
+      
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+         });
+      }
+     
+    </script>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-default">
       <a class="navbar-brand">Let's Cook</a>
-      <button 
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        class="navbar-toggler"
-      >
+      <button type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="navbar NavDropdown" class="collapse navbar-collapse">
@@ -57,43 +80,24 @@ html.
                   <div class="col-md-12">
                     Login via
                     <div class="social-buttons">
-                      <a href="#" class="btn btn-fb"
-                        ><i class="fa fa-facebook"></i> Facebook</a
-                      ><a href="#" class="btn btn-tw"
-                        ><i class="fa fa-twitter"></i> Twitter</a
-                      >
+                     <fb:login-button 
+                      class="fb-btn"
+                      scope="public_profile,email"
+                      onlogin="checkLoginState();">
+                     </fb:login-button>                
+                      
+                      <a href="" class="btn btn-tw">
+                      <i class="fa fa-twitter"></i> Twitter</a>
                     </div>
                     or
-                    <form id="login-nav" 
-                      role="form"
-                      method="post"
-                      action="login"
-                      accept-charset="UTF-8"
-                      class="form"
-                    >
+                    <form id="login-nav" role="form" method="post" action="login" accept-charset="UTF-8" class="form">
                       <div class="form-group">
-                        <label for="exampleInputEmail2" class="sr-only"
-                          >Email address</label
-                        ><input
-                          id="exampleInputEmail2"
-                          placeholder="Email address"
-                          required=""
-                          class="form-control"
-                          type="email"
-                        />
+                        <label for="exampleInputEmail2" class="sr-only">Email address</label>
+                        <input id="exampleInputEmail2" placeholder="Email address" required="" class="form-control" type="email"/>
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword2" class="sr-only"
-                          >Password</label
-                        ><input
-                          id="exampleInputPassword2"
-                          placeholder="Password"
-                          required=""
-                          class="form-control"
-                          type="password"
-                        /><!--
-                          .help-block.text-righta(href='') Forget the password ?
-                        -->
+                        <label for="exampleInputPassword2" class="sr-only">Password</label>
+                        <input id="exampleInputPassword2" placeholder="Password" required="" class="form-control" type="password"/>
                       </div>
                       <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">
@@ -101,9 +105,8 @@ html.
                         </button>
                       </div>
                       <div class="checkbox">
-                        <label
-                          ><input type="checkbox" /> keep me logged-in</label
-                        >
+                        <label>
+                        <input type="checkbox" /> keep me logged-in</label >
                       </div>
                     </form>
                   </div>
@@ -117,6 +120,7 @@ html.
         </ul>
       </div>
     </nav>
+
     <div class ='wrapper'>
       <header class="clearfix centered">
           <div class="logo">
