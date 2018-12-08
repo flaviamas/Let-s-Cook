@@ -12,9 +12,12 @@ body {
   margin-top:10;
 }
 h1 {
-  font-family: "indie-flower", cursive;
+  font-family: "Fira Sans", sans-serif;
   color: #454552;
+  margin-top: 3%;
+  font-size: 300%;
 }
+
 .container{
   text-align: center;
   width: 98%;
