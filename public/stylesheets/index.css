@@ -11,6 +11,7 @@ body {
   margin-top:10;
 }
 
+
 h1 {
   font-family: "Fira Sans", sans-serif;
   color: #454552;
@@ -74,10 +75,19 @@ h1 {
 #login-dp .form-group {
   margin-bottom: 10px;
 }
+
+
 .btn-fb {
   color: #fff;
   background-color: #3b5998;
 }
+.profile{
+  display:none;
+}
+.logout{
+  display:none;
+}
+
 .btn-fb:hover {
   color: #fff;
   background-color: #496ebc;
