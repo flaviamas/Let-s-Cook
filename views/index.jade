@@ -45,6 +45,7 @@ html.
         if(response.status==='connected'){
           console.log('Logged in and authenticated');
           setElements(true);
+          testAPI();
         }else{
           console.log('Not authenticated');
           setElements(false);
@@ -63,13 +64,13 @@ html.
           document.getElementById('profile').style.display='block';
           document.getElementById('fb-btn').style.display='none';
           document.getElementById('heading').style.display='none';
-          document.getElementById('welcome').style.display='block';
+          //document.getElementById('welcome').style.display='block';
         }else{
           document.getElementById('logout').style.display='none';
           document.getElementById('profile').style.display='none';
           document.getElementById('fb-btn').style.display='block';
           document.getElementById('heading').style.display='block';
-          document.getElementById('welcome').style.display='none';
+          //document.getElementById('welcome').style.display='none';
         }
       }
 
@@ -79,11 +80,18 @@ html.
         });
       }
   
+      function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me?fields=name,email', function(response) {
+          console.log('Successful login for: ' + response.name);
+          document.getElementById('profile').innerHTML ='Welcome ' + response.name + ' thanks for logging in!';
+        });
+      }
      
     </script>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-default">
-      <a class="navbar-brand">Let's Cook</a>
+      <div class="navbar-brand">Let's Cook</div>
       <button type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -116,8 +124,8 @@ html.
                       onlogin="checkLoginState();">
                      </fb:login-button>        
                       
-                      <a href="" class="btn btn-tw">
-                      <i class="fa fa-twitter"></i> Twitter</a>
+                      <!--<a href="" class="btn btn-tw">
+                      <i class="fa fa-twitter"></i> Twitter</a>-->
                     </div>
                     or
                     <form id="login-nav" role="form" method="post" action="login" accept-charset="UTF-8" class="form">
@@ -147,11 +155,16 @@ html.
               </li>
             </ul>
           </li>
-          
-          <li class="navbar-right">
-            <h6 id="heading">Log in to view your profile</h6>
-            <h6 id="welcome"> Welcome!</h6>
+          <li class="navbar-text navbar-right">
+            <div class="navbar-right" id="profile"></div>
+            <div id="heading">Log in and start!</div>
           </li>
+         
+          <!--<li class="navbar-brand navbar-rigth">
+            
+            <h6 id="welcome"> Welcome!</h6>
+          </li>-->
+
         </ul>
         
       </div>
