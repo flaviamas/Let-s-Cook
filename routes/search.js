@@ -20,7 +20,8 @@ router.post("/", function(req, res) {
       });
     } else {
       let fileJson = JSON.parse(body);
-      res.render("results", { jsonfile: fileJson });
+      let nres = fileJson["hits"].length;
+      res.render("results", { jsonfile: fileJson, nres: nres },);
       //res.json(fileJson); //vede se la richiesta è andata a buon fine, res.render fa il rendere, res.json fa il render del json
     }
   });
