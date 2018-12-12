@@ -1,17 +1,7 @@
-img.bg {
-    /* regole per riempire la pagina con lo sfondo prescelto */
-        min-height: 100%;
-        min-width: 1024px;
-    /* regole per ridimensionare l'immagine proporzionalmente */
-       width: 100%;
-       height: auto;
-    /* posizonamento dello sfondo */
-       position: fixed;
-       top: 0;
-       left: 0;
-    }
+
 body{
-    background-color: #ebd2b4;
+    background-color: #dad4ce;
+    background-image: url(/images/arancia_2.jpg);
 }
 .navbar-default {
     background-color:#f7f7f7;
