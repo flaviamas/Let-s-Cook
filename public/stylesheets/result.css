@@ -10,13 +10,19 @@ a:hover{
     border-radius: 4%;
 }
 .res{
-    margin-top: 10%
+    margin-top: 10%;
+    margin-left: 10%;
 }
 h1{
     font-family: "crougette";
     margin-top: 2%;
+    margin-left: 33%;
 }
 .navbar-default {
     background-color: #454552;
     border-color: #e7e7e7;
   }
+.ricetta{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}

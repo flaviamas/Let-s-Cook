@@ -18,9 +18,11 @@ router.post("/", function(req, res) {
         error: "error, try with another ingredient"
       });
     } else {
+     
       let fileJson = JSON.parse(body);
-      res.render("resultscocktail", { jsonfile: fileJson });
-     // res.json(fileJson); //vede se la richiesta è andata a buon fine, res.render fa il rendere, res.json fa il render del json
+      
+      res.render("resultscocktail", { jsonfile: fileJson },);
+      //res.json(fileJson); //vede se la richiesta è andata a buon fine, res.render fa il rendere, res.json fa il render del json
     }
   });
 });

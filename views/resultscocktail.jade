@@ -19,11 +19,31 @@ html(lang="en")
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
-    - var fileJson = jsonfile['drinks'][0]['strDrink'];
-    - var img1 = jsonfile['drinks'][1]['strDrinkThumb'];
-    - var instr = jsonfile ['drinks'][1]['strInstructions'];
-    -console.log(fileJson);
-    p(class='cocktail') #{fileJson}
-    img(src=img1,class="img")
-    p #{instr}
+    -console.log(jsonfile);
+    -if(jsonfile['drinks'] == null) 
+      div(class="errore")
+        h2 Error, we Cannot find anything with this name, try another one!
+    -else       
+      - var fileJson = jsonfile['drinks'][0]['strDrink'];
+      - var img1 = jsonfile['drinks'][0]['strDrinkThumb'];
+      - var instr = jsonfile ['drinks'][0]['strInstructions'];
+      - var ingredient1=jsonfile['drinks'][0]['strIngredient1'];
+      - var ingredient2=jsonfile['drinks'][0]['strIngredient2'];
+      - var ingredient3=jsonfile['drinks'][0]['strIngredient3'];
+      - var glass = jsonfile['drinks'][0]['strGlass'];
+      -console.log("sto nell'else");
+      div(class="results")
+        h1(class='cocktail') #{fileJson}
+      div(class="row")
+        div(class="col-sm-4")
+            img(src=img1,class="img")
+        div(class="col-sm-8")
+          h3 What do you need:
+          p Glass: #{glass}
+          p Ingredients: #{ingredient1} , #{ingredient2}, #{ingredient3} 
+          br
+          h3 Recipe:
+          br
+          p #{instr} 
 
+ 

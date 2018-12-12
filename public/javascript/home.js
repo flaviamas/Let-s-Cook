@@ -72,6 +72,8 @@ Vue.component('card', {
   }
 });
 
-const app = new Vue({
-  el: '#app'
-});
+window.onload = function() {
+    const app = new Vue({
+    el: "#app"
+    });
+    };
