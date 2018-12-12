@@ -9,11 +9,13 @@ html.
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Bangers|Croissant+One|Fredoka+One|Kavoon|Slabo+27px|Varela+Round" rel="stylesheet"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"> </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" ></script>
     <link rel="stylesheet" href="/stylesheets/index.css" />
+    <script src="/javascript/home.js"></script>
     <title>Food and cocktails recipes</title>
   </head>
  
@@ -198,7 +200,19 @@ html.
       <div class="text-separator">
        <h5>Find here your favuorite recipes </h5> 
       </div>
-  
+    <div id="app" class="container">
+      <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+         <h1 slot="header">Trees</h1>
+      </card>
+      <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+         <h1 slot="header">Lakes</h1>
+      </card>
+      </div>
+
+
+
+
+
     <div role="contentinfo" class="footer container-lg px-3 foot">
       <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light" >
         <ul class="d-flex flex-wrap list-unstyled">
