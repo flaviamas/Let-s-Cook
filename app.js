@@ -41,6 +41,7 @@ app.use("/resultscocktail", resultscocktail);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+  console.log("non trovo la pagina");
 });
 
 // error handler

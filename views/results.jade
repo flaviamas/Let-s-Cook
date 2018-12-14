@@ -24,11 +24,14 @@ html(lang="en")
     
     - var x = jsonfile["to"];
     - console.log(nres);
-    -if(nres<3) 
+    -if(nres<3)
       h2 Error, we Cannot find anything with this name, try another Recipe or ingredient!
+      br
+      a(type="button" class="btn btn-danger" href="/search") Back
+
     -else 
       h1 Select Your Favourite Recipe!
-      -for(i = 0; i+3 < nres; i+=3)
+      -for(i = 0; i+2 < nres; i+=3)
         - var fileJson1 = jsonfile["hits"][i]["recipe"]["label"];
         - var img1 = jsonfile["hits"][i]["recipe"]["image"];
         - var link1 = jsonfile["hits"][i]["recipe"]["url"];

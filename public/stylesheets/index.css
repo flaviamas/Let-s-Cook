@@ -1,6 +1,7 @@
 body {
   background-color: #fafafa;
   color: black;
+
 }
 
 
@@ -109,7 +110,7 @@ body {
   background-color: #454552;
 }
 .logo{
-  margin-left: 40%;
+  text-align: center;
 }
 .imglogo{
   size: 2000%;

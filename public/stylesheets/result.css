@@ -21,6 +21,11 @@ h1{
     margin-top: 2%;
     margin-left: 33%;
 }
+h2{
+    color: red;
+    margin-top: 5%;
+    margin-left: 23%;
+}
 .navbar-default {
     background-color: #454552;
     border-color: #e7e7e7;
@@ -31,4 +36,7 @@ h1{
 }
 .row{
     margin-bottom: 7%;
+}
+.btn{
+    margin-left:45%;
 }
