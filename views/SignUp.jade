@@ -1,3 +1,4 @@
+
 doctype html
 html
   head
@@ -33,7 +34,7 @@ html
               span SIGN UP
             .row(style='float: none; margin: 0 auto;')
             br
-            form#signup.form-horizontal(method='post', action='/php/info.php', name='sign_up', onSubmit='return validaForm()')
+            form#signup.form-horizontal(method='post', action='index', name='sign_up', onSubmit='return validaForm()')
               .form-group
                 label.control-label.col-sm-3
                   | Email
@@ -42,7 +43,7 @@ html
                   .input-group
                     span.input-group-addon
                       i.glyphicon.glyphicon-envelope
-                    input#emailid.form-control(required, type='email', name='emailid', placeholder='Enter your Email ID', value='')
+                    input#emailid.form-control( type='email', name='email_name', placeholder='Enter your Email ID', value='', onChange="return controlloEmail()")
                   small  Your Email will also be used as your username 
               .form-group
                 label.control-label.col-sm-3
@@ -61,35 +62,34 @@ html
                   .input-group
                     span.input-group-addon
                       i.glyphicon.glyphicon-lock
-                    input#cpassword.form-control(required, type='password', name='cpassword', placeholder='Confirm your password', value='')
+                    input#cpassword.form-control(required, type='password', name='cpassword', placeholder='Confirm your password', value='', onChange="return controlloPassword()")
               
               .form-group
                 label.control-label.col-sm-3
                   | First Name 
                   span.text-danger *
                 .col-md-6.col-sm-7
-                  input#mem_name.form-control(required, type='text', name='first_name', placeholder='Enter your First Name', value='')
+                  input#mem_name.form-control(required, type='text', name='nome', placeholder='Enter your First Name', value='', onChange="return controlloNome()")
               .form-group
                 label.control-label.col-sm-3
                   | Last Name 
                   span.text-danger *
                 .col-md-6.col-sm-7
-                  input#mem_name.form-control(required, type='text', name='last_name', placeholder='Enter your Last Name', value='')
+                  input#mem_name.form-control(required, type='text', name='cognome', placeholder='Enter your Last Name', value='', onChange="return controlloCognome()")
               
               .form-group.label_001
                 .col-md-6.col-sm-7
                   label Gender: 
                   span.text-danger *
                   br
-                  label.radio-inline
-                    input(type='radio', name='optradio') 
+                  label.radio-inline 
+                    input(required,type='radio', name='optradio') 
                     | Male 
+                  
                   label.radio-inline
-                    input(type='radio', name='optradio')
+                    input(required,type='radio', name='optradio')
                     | Female 
-                  label.radio-inline
-                    input(type='radio', name='optradio')
-                    | Other
+                  
 
               .form-group
                 label.control-label.col-sm-3
@@ -106,7 +106,7 @@ html
     .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light
       ul.d-flex.flex-wrap.list-unstyled
           li.mr-3
-            span(title='0.37980s from unicorn-7b444b594b-twlsg') © 2018 Let's cook
+            span(title='0.37980s from unicorn-7b444b594b-twlsg') Â© 2018 Let's cook
           li.mr-3
             a(href='Privacy') Privacy
           li.mr-3
@@ -117,5 +117,3 @@ html
             a(href='AboutUs') AboutUs
         .d-flex.flex-justify-center.pb-6
           span.f6.text-gray-light
-
-        
