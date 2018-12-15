@@ -22,7 +22,7 @@ html(lang="en")
               a.nav-link(href='/') Home
     div(class = "searchbar")
           form(action='/searchcocktail', method='post')
-              input#product_name(type='text',class='search', name='name_field', placeholder='Product name')
+              input.search#product_name(type='text',class='shadow', name='name_field', placeholder='Product name',required)
               input(class = 'btn',type='submit', value='Search')
 
-        
+         

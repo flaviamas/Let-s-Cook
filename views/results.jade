@@ -23,9 +23,10 @@ html(lang="en")
               a.nav-link(href='/') Home
     
     -if(nres<3)
-      h2 Error, we Cannot find anything with this name, try another Recipe or ingredient!
-      br
-      a(type="button" class="btn btn-danger" href="/search") Back
+      div.container
+        h2 Error, we Cannot find anything with this name, try another Recipe or ingredient!
+        br
+        a(type="button" class="btn btn-danger" href="/search") Back
 
     -else 
       h1 Select Your Favourite Recipe!

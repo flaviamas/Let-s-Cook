@@ -1,42 +1,47 @@
-.ricetta{
-    margin-left: 4%;
-    margin-bottom: 10%;
-    color:black;   
+.ricetta {
+  margin-left: 4%;
+  margin-bottom: 10%;
+  color: black;
 }
-body{
-    background-color: snow;
+body {
+  background-color: snow;
 }
-a:hover{
-    color: rgb(230, 200, 102);
+a:hover {
+  color: rgb(230, 200, 102);
 }
-.img{
-    border-radius: 4%;
+.img {
+  border-radius: 4%;
 }
-.res{
-    margin-top: 10%;
-    margin-left: 10%;
+.res {
+  margin-top: 10%;
+  margin-left: 10%;
 }
-h1{
-    font-family: "crougette";
-    margin-top: 2%;
-    margin-left: 33%;
+.container{
+    text-align: center;
 }
-h2{
-    color: red;
-    margin-top: 5%;
-    margin-left: 23%;
+
+
+
+h1 {
+  font-family: "crougette";
+  margin-top: 2%;
+  margin-left: 33%;
+}
+h2 {
+  color: red;
+  margin-top: 5%;
 }
 .navbar-default {
-    background-color: #454552;
-    border-color: #e7e7e7;
-  }
-.ricetta{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
+  background-color: #454552;
+  border-color: #e7e7e7;
 }
-.row{
-    margin-bottom: 7%;
+.ricetta {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
 }
-.btn{
-    margin-left:45%;
+.row {
+  margin-bottom: 7%;
+}
+.btn {
+  margin-left: 0%;
 }

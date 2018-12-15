@@ -3,7 +3,7 @@ body {
   font-family: "calibri", sans-serif;
   color: #333;
   line-height: 22px;
-  background-color: rgb(248, 248, 248);  
+  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
   
 }
 
