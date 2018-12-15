@@ -1,26 +1,32 @@
 var express = require("express");
+var pgp = require('pg-promise')();
 var router = express.Router();
+var db = pgp("postgres://postgres:@localhost:5432/Letscook");
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
   res.render("SignUp", { title: "Express" });
 });
 
+router.post("/", function(req, res) {
+  let email = req.body.emailid;
+  db.one('SELECT * FROM utente where $1=utente.email',email)
+  .then(function(data){
+    console.log(data);
+    //res.send("fatto");
+  })
+  .catch(function(err){
+    console.log(err);
+    let password=req.body.password;
+    let nome=req.body.first_name;
+    let cognome = req.body.last_name;
+    console.log(password,nome,cognome);
+    db.one('INSERT INTO UTENTE VALUES ($1,$2,$3,$4)',[email,nome,cognome,password]).then(function(ok){
+      console.log('not ok');
+    }).catch(function(errore){
+      res.render("index");
+    });
+  });
+  
+});
 module.exports = router;
-
-function validaForm(){
-  if (document.signup.password.value.length<5){
-    alert("password too short");
-    return false;
-  }
-  if(document.signup.cpassword.value.length<5){
-    alert("password too short");
-    return false;
-  }
-  if(document.signup.cpassword.value != document.signup.password.value){
-    alert("different password,please enter the same password");
-    return false;
-  }
-  return true;
-}
-

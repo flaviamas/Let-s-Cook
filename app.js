@@ -15,6 +15,7 @@ var contactUs= require("./routes/contactUs");
 var privacy = require("./routes/privacy");
 var resultscocktail = require("./routes/resultscocktail");
 
+
 var app = express();
 
 // view engine setup
