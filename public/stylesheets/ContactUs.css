@@ -1,3 +1,4 @@
+
 img.bg {
     /* regole per riempire la pagina con lo sfondo prescelto */
         min-height: 100%;
@@ -13,7 +14,12 @@ img.bg {
        opacity: 0.6;
 }
 
-h1,h2{
+h1{
+    text-align:center;
+    font-family: 'indie flower';
+}
+h2{
+    text-align:center;
     font-family: 'indie flower';
 }
 
@@ -25,3 +31,5 @@ h1,h2{
 .container.contentinfo{
     background-color:#454552;
 }
+
+
