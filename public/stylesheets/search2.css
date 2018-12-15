@@ -1,19 +1,18 @@
-body{
-    background-image :url(/images/cocktail.jpg);
+body {
+  background-image: url(/images/cocktail.jpg);
 }
 .navbar-default {
-    background-color:#f7f7f7;
- 
-  }
-.searchbar{
-    margin-top: 5%;
-    margin-left: 15%;
-    border-radius: 3%;
+  background-color: #f7f7f7;
 }
-.label{
-    margin-top:5%;
-    margin-right: 2%;
+.searchbar {
+  margin-top: 5%;
+  margin-left: 15%;
+  border-radius: 3%;
 }
-.search{
-    width:  70%;
-} 
+.label {
+  margin-top: 5%;
+  margin-right: 2%;
+}
+.search {
+  width: 70%;
+}

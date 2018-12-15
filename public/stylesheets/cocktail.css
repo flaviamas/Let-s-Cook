@@ -1,39 +1,38 @@
-.p{
-    margin-left: 4%;
-    margin-bottom: 10%;
-    color:black;   
+.p {
+  margin-left: 4%;
+  margin-bottom: 10%;
+  color: black;
 }
-.body{
-    background-color: antiquewhite;
+.body {
+  background-color: antiquewhite;
 }
 
-.img{
-    border-radius: 4%;
-    width: 60%;
-    margin-left: 5%;
+.img {
+  border-radius: 4%;
+  width: 60%;
+  margin-left: 5%;
 }
-.res{
-    margin-top: 10%
+.res {
+  margin-top: 10%;
 }
-h1{
-    font-family: "crougette";
-    margin-top: 2%;
-    
+h1 {
+  font-family: "crougette";
+  margin-top: 2%;
 }
 .navbar-default {
-    background-color: #454552;
-    border-color: #e7e7e7;
-  }
-  .errore{
-    text-align: center;
-  }
-  h2{
-      margin-top: 5%;
-      color: red;
-  }
-  .results{
-      text-align: center;
-  }
-  .col-sm{
-      text-align: left;
-  }
+  background-color: #454552;
+  border-color: #e7e7e7;
+}
+.errore {
+  text-align: center;
+}
+h2 {
+  margin-top: 5%;
+  color: red;
+}
+.results {
+  text-align: center;
+}
+.col-sm {
+  text-align: left;
+}

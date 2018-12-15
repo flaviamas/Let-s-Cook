@@ -1,35 +1,32 @@
-
 img.bg {
-    /* regole per riempire la pagina con lo sfondo prescelto */
-        min-height: 100%;
-        min-width: 1024px;
-    /* regole per ridimensionare l'immagine proporzionalmente */
-       width: 100%;
-       height: auto;
-    /* posizonamento dello sfondo */
-       position: fixed;
-       top: 0;
-       left: 0;
-    /*opacita sfondo */
-       opacity: 0.6;
+  /* regole per riempire la pagina con lo sfondo prescelto */
+  min-height: 100%;
+  min-width: 1024px;
+  /* regole per ridimensionare l'immagine proporzionalmente */
+  width: 100%;
+  height: auto;
+  /* posizonamento dello sfondo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*opacita sfondo */
+  opacity: 0.6;
 }
 
-h1{
-    text-align:center;
-    font-family: 'indie flower';
+h1 {
+  text-align: center;
+  font-family: "indie flower";
 }
-h2{
-    text-align:center;
-    font-family: 'indie flower';
-}
-
-.foot{
-    margin-bottom: 0%;
-    margin-top: 32%;
-  }
-  
-.container.contentinfo{
-    background-color:#454552;
+h2 {
+  text-align: center;
+  font-family: "indie flower";
 }
 
+.foot {
+  margin-bottom: 0%;
+  margin-top: 32%;
+}
 
+.container.contentinfo {
+  background-color: #454552;
+}
