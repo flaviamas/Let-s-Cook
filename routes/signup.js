@@ -10,7 +10,7 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/", function(req, res) {
-  let email = req.body.emailid;
+  let email = req.body.email_name;
   db.one('SELECT * FROM utente where $1=utente.email',email)
   .then(function(data){
     console.log('già registrato',data);
@@ -20,13 +20,14 @@ router.post("/", function(req, res) {
   .catch(function(err){
     console.log(err);
     let password=req.body.password;
-    let nome=req.body.first_name;
-    let cognome = req.body.last_name;
+    let nome=req.body.nome;
+    let cognome = req.body.cognome;
     console.log(password,nome,cognome);
     db.one('INSERT INTO UTENTE VALUES ($1,$2,$3,$4)',[email,nome,cognome,password]).then(function(ok){
       console.log('not ok');
     }).catch(function(errore){
-      res.render("index");
+      let ris='registrato!'
+      res.render('SignUp',{ris:ris});
     });
   });
   
