@@ -12,7 +12,8 @@ router.post("/", function(req, res) {
   let email = req.body.emailid;
   db.one('SELECT * FROM utente where $1=utente.email',email)
   .then(function(data){
-    console.log(data);
+    console.log('già registrato',data);
+    res.render("error");
     //res.send("fatto");
   })
   .catch(function(err){
