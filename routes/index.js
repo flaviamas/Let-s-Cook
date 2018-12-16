@@ -12,23 +12,22 @@ router.get("/", function(req, res, next) {
 
 //controllo campo login
 router.post("/", function(req, res) {
-  let email = req.body.email_login;
-  let password=req.body.psw_login;
+  let email = req.body.email;
+  let password=req.body.password;
 
   //metodo one significa che la funzione viene esguita una sola volta
   db.one('SELECT * FROM utente where $1=utente.email',email).then(function(data){
     //stampa sul terminale i dati partendo dalla mail inserita
     console.log("i dati dell'utente dalla mail sono:")
     console.log(data);
+    res.render('index',{nome:data.nome})
   })
   .catch(function(err){
     console.log(err);
     console.log("email inserita è:", email)
-    console.log("la password inserita è:",password)
-    if(function(errore){
-      console.log("LOGIN ERROR!!!!!!!!!!!!!")
-      res.render("index");
-    });
+    console.log("la password inserita è:",password)  
+    console.log("LOGIN ERROR!!!!!!!!!!!!!")
+    res.render("index");
   });
   
 });
