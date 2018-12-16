@@ -90,6 +90,9 @@ html.
           document.getElementById('profile').innerHTML ='Welcome ' + response.name + ' thanks for logging in!';
         });
       }
+      function checklog(){
+          setElements(true);
+      }
      
     </script>
 
@@ -125,7 +128,7 @@ html.
                      </fb:login-button>        
                       
                     or
-                    <form id="login-nav" role="form" method="post" action="" accept-charset="UTF-8" class="form" >
+                    <form id="login-nav" role="form" method="post" action="" accept-charset="UTF-8" class="form" onSubmit="checklog()">
                       <div class="form-group">
                         <label for="exampleInputEmail2" class="sr-only">Email address</label>
                         <input name="email" placeholder="Email address" required="" class="form-control" type="email"/>
@@ -157,7 +160,7 @@ html.
       <div class="navbar-nav">
         <li class="navbar-text navbar-right">
           <div id="profile"></div>
-          <div id="heading">Log in and start! #{nome}</div>
+          <div id="heading" name="heading"> </div>
         </li>
       </div>
     </nav>

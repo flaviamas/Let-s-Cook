@@ -14,6 +14,7 @@ router.post("/", function(req, res) {
   db.one('SELECT * FROM utente where $1=utente.email',email)
   .then(function(data){
     console.log('già registrato',data);
+    done();
     res.render("error");
     //res.send("fatto");
   })
@@ -24,12 +25,15 @@ router.post("/", function(req, res) {
     let cognome = req.body.cognome;
     console.log(password,nome,cognome);
     db.one('INSERT INTO UTENTE VALUES ($1,$2,$3,$4)',[email,nome,cognome,password]).then(function(ok){
+      done();
       console.log('not ok');
     }).catch(function(errore){
       let ris='registrato!'
+      done();
       res.render('SignUp',{ris:ris});
     });
   });
+ 
   
 });
 module.exports = router;
