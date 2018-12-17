@@ -18,9 +18,10 @@ router.post("/", function(req, res) {
   //metodo one significa che la funzione viene esguita una sola volta
   var q1= db.one('SELECT * FROM utente where $1=utente.email',email).then(function(data){
     //stampa sul terminale i dati partendo dalla mail inserita
+    let welcomestr="Welcome "+data.nome+ " thanks for logging in!";
     console.log("user data:")
     console.log(data);
-    res.render('index',{nome:data.nome})
+    res.render('index',{nome:welcomestr})
   })
   .catch(function(err){
     console.log(err);
@@ -30,40 +31,7 @@ router.post("/", function(req, res) {
     res.render("index");
 
   });
-  /*
-  function checklog(){
-    if (!q1){
-      alert("You are not signed!");
-      return false;
-    }
-      alert("Welcome"+email+"!");
-      return true;
-  }*/
-/*
-
-  User.findOne({email: email_log, psw: password},function(err,user){
-    if(err){
-      console.log("erroreeeeeee",err);
-      return res.status(500).send();
-    }
-    if(!user){
-      return res.status(404).send();
-    
-    }
-    req.session.user=user;
-    return res.status(200).send();
-  })*/
-  
 });
 
 
 module.exports = router;
-/*
-
-router.get('index', function(req,res){
-  if(!req.session.user){
-    return res.status(401).send();
-  }
-  return res.status(200).send("Welcome to Let's cook");
-
-})*/

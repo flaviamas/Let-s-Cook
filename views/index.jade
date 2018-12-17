@@ -93,13 +93,6 @@ html.
         });
       }
 
-      function checklog(){
-        alert("you are logged in!");
-        document.getElementById('logout').style.display='block';
-        document.getElementById('heading').style.display='none';
-        document.getElementById('welcome').style.display='none';
-        
-      }
      
     </script>
 
@@ -135,7 +128,7 @@ html.
                      </fb:login-button>        
                       
                     or
-                    <form id="login-nav" role="form" method="post" action="" accept-charset="UTF-8" class="form" onSubmit="return checklog()" >
+                    <form id="login-nav" role="form" method="post" action="" accept-charset="UTF-8" class="form" >
                       <div class="form-group">
                         <label for="exampleInputEmail2" class="sr-only">Email address</label>
                         <input name="email_login" placeholder="Email address" required="" class="form-control" type="email"/>
@@ -163,8 +156,8 @@ html.
       <div class="navbar-nav">
         <li class="navbar-text navbar-right">
           <div id="profile"></div>
-          <div id="heading" name="heading"> Log in and start! </div>
-          <div id="welcome" name="welcome">Welcome in let's cook! </div>
+          <div id="heading" name="heading"> #{nome}</div>
+          <div id="welcome" name="welcome">  </div>
         </li>
       </div>
     </nav>
