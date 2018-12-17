@@ -34,7 +34,7 @@ html
               span SIGN UP
             .row(style='float: none; margin: 0 auto;')
             br
-            form#signup.form-horizontal(method='post', action='SignUp', name='sign_up')
+            form#signup.form-horizontal(method='post', name='sign_up', onSubmit="return validaForm()")
               .form-group
                 label.control-label.col-sm-3
                   | Email

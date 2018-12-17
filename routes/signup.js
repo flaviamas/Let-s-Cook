@@ -1,7 +1,7 @@
 var express = require("express");
 var pgp = require('pg-promise')();
 var router = express.Router();
-var db = pgp("postgres://postgres:@localhost:5432/Letscook");
+var db = pgp("postgres://postgres:admin@localhost:5432/Letscook");
 //per farlo funzionare da ilaria aggiungere dopo il secondo postgres la password "admin"
 
 /* GET home page. */

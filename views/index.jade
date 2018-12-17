@@ -64,12 +64,14 @@ html.
       function setElements(isLoggedIn){
         if(isLoggedIn){
           document.getElementById('logout').style.display='block';
+          //document.getElementById('logout_login').style.display='block';
           document.getElementById('profile').style.display='block';
           document.getElementById('fb-btn').style.display='none';
           document.getElementById('heading').style.display='none';
           //document.getElementById('welcome').style.display='block';
         }else{
           document.getElementById('logout').style.display='none';
+          //document.getElementById('logout_login').style.display='none';
           document.getElementById('profile').style.display='none';
           document.getElementById('fb-btn').style.display='block';
           document.getElementById('heading').style.display='block';
@@ -92,6 +94,9 @@ html.
       }
       function checklog(){
           setElements(true);
+      }
+      function logout_lin(){
+        setElements(false);
       }
      
     </script>
@@ -131,13 +136,14 @@ html.
                     <form id="login-nav" role="form" method="post" action="" accept-charset="UTF-8" class="form" onSubmit="checklog()">
                       <div class="form-group">
                         <label for="exampleInputEmail2" class="sr-only">Email address</label>
-                        <input name="email" placeholder="Email address" required="" class="form-control" type="email"/>
+                        <input name="email_login" placeholder="Email address" required="" class="form-control" type="email"/>
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword2" class="sr-only">Password</label>
-                        <input name="password" placeholder="Password" required="" class="form-control" type="password"/>
+                        <input name="password_login" placeholder="Password" required="" class="form-control" type="password"/>
                       </div>
                       <div class="form-group">
+                        <a id="login" href="#" class="btn" onclick="logout()"> Logout </a>
                         <button type="submit" class="btn btn-primary btn-block">
                           Sign in
                         </button>
@@ -160,7 +166,7 @@ html.
       <div class="navbar-nav">
         <li class="navbar-text navbar-right">
           <div id="profile"></div>
-          <div id="heading" name="heading"> </div>
+          <div id="heading" name="heading"> Log in and start! </div>
         </li>
       </div>
     </nav>

@@ -12,6 +12,7 @@ function validaForm() {
     alert("insert email");
     return false;
   }
+  alert("dati inseriti correttamente");
   return true;
 }
 
@@ -19,7 +20,7 @@ function controlloEmail() {
   var email_reg_exp = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+$/;
   if (!email_reg_exp.test(email_name) || email_name == "undefined") {
     alert("Please, enter correct email address!");
-    document.sign_up.emailid.select();
+    document.sign_up.email_name.select();
     return false;
   }
   return true;
