@@ -68,14 +68,14 @@ html.
           document.getElementById('profile').style.display='block';
           document.getElementById('fb-btn').style.display='none';
           document.getElementById('heading').style.display='none';
-          //document.getElementById('welcome').style.display='block';
+          document.getElementById('welcome').style.display='none';
         }else{
           document.getElementById('logout').style.display='none';
           //document.getElementById('logout_login').style.display='none';
           document.getElementById('profile').style.display='none';
           document.getElementById('fb-btn').style.display='block';
           document.getElementById('heading').style.display='block';
-          //document.getElementById('welcome').style.display='none';
+          document.getElementById('welcome').style.display='none';
         }
       }
 
@@ -92,9 +92,13 @@ html.
           document.getElementById('profile').innerHTML ='Welcome ' + response.name + ' thanks for logging in!';
         });
       }
-     
-      function logout_lin(){
-        setElements(false);
+
+      function checklog(){
+        alert("you are logged in!");
+        document.getElementById('logout').style.display='block';
+        document.getElementById('heading').style.display='none';
+        document.getElementById('welcome').style.display='none';
+        
       }
      
     </script>
@@ -131,7 +135,7 @@ html.
                      </fb:login-button>        
                       
                     or
-                    <form id="login-nav" role="form" method="post" action="" accept-charset="UTF-8" class="form" onSubmit="checklog()">
+                    <form id="login-nav" role="form" method="post" action="" accept-charset="UTF-8" class="form" onSubmit="return checklog()" >
                       <div class="form-group">
                         <label for="exampleInputEmail2" class="sr-only">Email address</label>
                         <input name="email_login" placeholder="Email address" required="" class="form-control" type="email"/>
@@ -141,14 +145,9 @@ html.
                         <input name="password_login" placeholder="Password" required="" class="form-control" type="password"/>
                       </div>
                       <div class="form-group">
-                        <!--<a id="login" href="#" class="btn" onclick="logout()"> Logout </a>-->
                         <button type="submit" class="btn btn-primary btn-block">
                           Sign in
                         </button>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                        <input type="checkbox" /> keep me logged-in</label >
                       </div>
                     </form>
                   </div>
@@ -165,6 +164,7 @@ html.
         <li class="navbar-text navbar-right">
           <div id="profile"></div>
           <div id="heading" name="heading"> Log in and start! </div>
+          <div id="welcome" name="welcome">Welcome in let's cook! </div>
         </li>
       </div>
     </nav>

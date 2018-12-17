@@ -12,7 +12,7 @@ router.get("/", function(req, res, next) {
 
 //controllo campo login
 router.post("/", function(req, res) {
-  var email = req.body.email_login;
+  var email= req.body.email_login;
   var password=req.body.psw_login;
   
   //metodo one significa che la funzione viene esguita una sola volta
@@ -24,13 +24,13 @@ router.post("/", function(req, res) {
   })
   .catch(function(err){
     console.log(err);
-    console.log("email inserita è:", email)
-    console.log("la password inserita è:",password)  
+    console.log("email entered is:", email)
+    console.log("password entered is:",password)  
     console.log("LOGIN ERROR!!!!!!!!!!!!!")
     res.render("index");
 
   });
-  
+  /*
   function checklog(){
     if (!q1){
       alert("You are not signed!");
@@ -38,9 +38,9 @@ router.post("/", function(req, res) {
     }
       alert("Welcome"+email+"!");
       return true;
-  }
-
+  }*/
 /*
+
   User.findOne({email: email_log, psw: password},function(err,user){
     if(err){
       console.log("erroreeeeeee",err);
@@ -48,17 +48,18 @@ router.post("/", function(req, res) {
     }
     if(!user){
       return res.status(404).send();
+    
     }
     req.session.user=user;
     return res.status(200).send();
-  })
-  */
+  })*/
+  
 });
 
 
 module.exports = router;
-
 /*
+
 router.get('index', function(req,res){
   if(!req.session.user){
     return res.status(401).send();
