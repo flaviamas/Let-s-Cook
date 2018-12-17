@@ -20,9 +20,9 @@ html(lang="en")
             li.nav-item.active
               a.nav-link(href='/') Home
             li.nav-item.active
-              a.nav-link(href='searchCocktail') Home
+              a.nav-link(href='searchCocktail') Search
 
-    -console.log(jsonfile);
+
     -if(jsonfile['drinks'] == null) 
       div(class="errore")
         h2 Error, we Cannot find anything with this name, try another one!
@@ -35,7 +35,7 @@ html(lang="en")
       - var ingredient2=jsonfile['drinks'][0]['strIngredient2'];
       - var ingredient3=jsonfile['drinks'][0]['strIngredient3'];
       - var glass = jsonfile['drinks'][0]['strGlass'];
-      -console.log("sto nell'else");
+
       div(class="results")
         h1(class='cocktail') #{fileJson}
       div(class="row")
