@@ -24,7 +24,7 @@ html(lang="en")
     -if(jsonfile['drinks'] == null) 
       div(class="errore")
         h2 Error, we Cannot find anything with this name, try another one!
-        a(type="button" class="btn btn-danger" href="/search") Back
+        a(type="button" class="btn btn-danger" href="/searchCocktail") Back
     -else       
       - var fileJson = jsonfile['drinks'][0]['strDrink'];
       - var img1 = jsonfile['drinks'][0]['strDrinkThumb'];

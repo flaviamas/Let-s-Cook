@@ -6,12 +6,10 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel='stylesheet', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
-    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
-    link(rel="stylesheet", href="/stylesheets/search.css")
     script(src="/javascript/search.js")
+    link(rel="stylesheet", href="/stylesheets/search.css")
     title Search
-  body
+  body(onload="initializeStorage()") 
     nav.navbar.navbar-expand-lg.navbar-light.navbar-default
       a.navbar-brand Let's Cook
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
@@ -20,11 +18,11 @@ html(lang="en")
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
-    div(class="searchbar")
+    div.container
       form(action='/search', method='post', onsubmit="return addStorage()")
-          input.search#product_name(type='text',class= "shadow ", name='name_field', placeholder='Product name')
-          input(class = 'btn',type='submit', value='Search')
+        div(class="input-group mb-3")
+          input.form-control#product_name(type='text', name='name_field', placeholder='Product name')
+          div.input-group-append
+            input(class = 'btn btn-primary',type='submit', value='Search')
       br
-      div(class='localStorage')
-
-     
+      div#localStorage

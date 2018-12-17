@@ -13,7 +13,7 @@ router.get("/", function(req, res, next) {
 //controllo campo login
 router.post("/", function(req, res) {
   var email= req.body.email_login;
-  var password=req.body.psw_login;
+  var password=req.body.password_login;
   
   //metodo one significa che la funzione viene esguita una sola volta
   var q1= db.one('SELECT * FROM utente where $1=utente.email and $2=psw',[email,password]).then(function(data){
