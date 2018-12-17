@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var pgp = require('pg-promise')();
-var db = pgp("postgres://postgres:admin@localhost:5432/Letscook");
+var db = pgp("postgres://postgres:@localhost:5432/Letscook");
 //per farlo funzionare da ilaria scrivere dopo il secondo postgres la password "admin"
 
 /* GET home page. */
@@ -16,7 +16,7 @@ router.post("/", function(req, res) {
   var password=req.body.psw_login;
   
   //metodo one significa che la funzione viene esguita una sola volta
-  var q1= db.one('SELECT * FROM utente where $1=utente.email',email).then(function(data){
+  var q1= db.one('SELECT * FROM utente where $1=utente.email and $2=psw',[email,password]).then(function(data){
     //stampa sul terminale i dati partendo dalla mail inserita
     let welcomestr="Welcome "+data.nome+ " thanks for logging in!";
     console.log("user data:")
@@ -28,8 +28,7 @@ router.post("/", function(req, res) {
     console.log("email entered is:", email)
     console.log("password entered is:",password)  
     console.log("LOGIN ERROR!!!!!!!!!!!!!")
-    res.render("index");
-
+    res.render("SignUp",);
   });
 });
 

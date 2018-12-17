@@ -17,3 +17,10 @@ body {
 .search {
   width: 70%;
 }
+
+#localStorage {
+  background-color: whitesmoke;
+  padding: 8px;
+  width: 70%;
+  border-radius: 8px;
+}

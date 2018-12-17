@@ -1,7 +1,7 @@
 var express = require("express");
 var pgp = require('pg-promise')();
 var router = express.Router();
-var db = pgp("postgres://postgres:admin@localhost:5432/Letscook");
+var db = pgp("postgres://postgres:@localhost:5432/Letscook");
 //per farlo funzionare da ilaria aggiungere dopo il secondo postgres la password "admin"
 
 /* GET home page. */
@@ -14,7 +14,6 @@ router.post("/", function(req, res) {
   db.one('SELECT * FROM utente where $1=utente.email',email)
   .then(function(data){
     console.log('già registrato',data);
-    done();
     res.render("error");
     //res.send("fatto");
   })
@@ -25,11 +24,10 @@ router.post("/", function(req, res) {
     let cognome = req.body.cognome;
     console.log(password,nome,cognome);
     db.one('INSERT INTO UTENTE VALUES ($1,$2,$3,$4)',[email,nome,cognome,password]).then(function(ok){
-      done();
       console.log('not ok');
     }).catch(function(errore){
       let ris='registrato!'
-      done();
+
       res.render('SignUp',{ris:ris});
     });
   });

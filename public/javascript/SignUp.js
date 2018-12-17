@@ -12,7 +12,6 @@ function validaForm() {
     alert("insert email");
     return false;
   }
-  alert("dati inseriti correttamente");
   return true;
 }
 
