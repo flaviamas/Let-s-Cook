@@ -3,7 +3,10 @@
   margin-bottom: 10%;
   color: black;
 }
-
+.navbar-default{
+  background-color: #333841;
+  border-color: white;
+}
 body {
   background-color: snow;
 }
