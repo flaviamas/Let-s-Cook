@@ -16,7 +16,7 @@ router.post("/", function(req, res) {
   var password=req.body.psw_login;
   
   //metodo one significa che la funzione viene esguita una sola volta
-  db.one('SELECT * FROM utente where $1=utente.email',email).then(function(data){
+  var q1= db.one('SELECT * FROM utente where $1=utente.email',email).then(function(data){
     //stampa sul terminale i dati partendo dalla mail inserita
     console.log("user data:")
     console.log(data);
@@ -28,7 +28,17 @@ router.post("/", function(req, res) {
     console.log("la password inserita è:",password)  
     console.log("LOGIN ERROR!!!!!!!!!!!!!")
     res.render("index");
+
   });
+  
+  function checklog(){
+    if (!q1){
+      alert("You are not signed!");
+      return false;
+    }
+      alert("Welcome"+email+"!");
+      return true;
+  }
 
 /*
   User.findOne({email: email_log, psw: password},function(err,user){
@@ -44,6 +54,7 @@ router.post("/", function(req, res) {
   })
   */
 });
+
 
 module.exports = router;
 

@@ -92,9 +92,7 @@ html.
           document.getElementById('profile').innerHTML ='Welcome ' + response.name + ' thanks for logging in!';
         });
       }
-      function checklog(){
-          setElements(true);
-      }
+     
       function logout_lin(){
         setElements(false);
       }
@@ -143,7 +141,7 @@ html.
                         <input name="password_login" placeholder="Password" required="" class="form-control" type="password"/>
                       </div>
                       <div class="form-group">
-                        <a id="login" href="#" class="btn" onclick="logout()"> Logout </a>
+                        <!--<a id="login" href="#" class="btn" onclick="logout()"> Logout </a>-->
                         <button type="submit" class="btn btn-primary btn-block">
                           Sign in
                         </button>
