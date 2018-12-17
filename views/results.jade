@@ -13,7 +13,7 @@ html(lang="en")
     link( href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Atma|Courgette|Kalam|Schoolbell")
     title Results
   body
-    nav.navbar.navbar-expand-lg.navbar-light.navbar-default
+    nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
       a.navbar-brand Let's Cook
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
@@ -21,7 +21,8 @@ html(lang="en")
           ul.navbar-nav
             li.nav-item.active
               a.nav-link(href='/') Home
-    
+            li.nav-item.active
+              a.nav-link(href='search') Search    
     -if(nres<3)
       div.container
         h2 Error, we Cannot find anything with this name, try another Recipe or ingredient!

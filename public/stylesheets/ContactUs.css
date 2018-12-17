@@ -26,6 +26,10 @@ h2 {
   margin-bottom: 0%;
   margin-top: 32%;
 }
+.footer{
+  background-color: white;
+  opacity: 0,9;
+}
 
 .container.contentinfo {
   background-color: #454552;
