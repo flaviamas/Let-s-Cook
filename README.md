@@ -8,4 +8,4 @@ l'applicazione richiede i seguenti servizi:
 * un database in locale su postgres 
 
 è possibile avviare il progetto lanciando il comando npm start da terminale e mettersi in ascolto su loclahost:3000
-Una copia completa del progetto è disponibile alla pagina :https://github.com/flaviamas/Let-s-Cook.git
+https://github.com/flaviamas/Let-s-Cook.git
