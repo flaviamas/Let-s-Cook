@@ -14,6 +14,7 @@ var results = require("./routes/results");
 var contactUs= require("./routes/contactUs");
 var privacy = require("./routes/privacy");
 var resultscocktail = require("./routes/resultscocktail");
+var chatRouter = require("./routes/chatroom");
 
 
 var app = express();
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/search", searchRouter);
@@ -37,6 +39,7 @@ app.use("/results", results);
 app.use("/ContactUs", contactUs);
 app.use("/Privacy", privacy);
 app.use("/resultscocktail", resultscocktail);
+app.use("/ChatRoom",chatRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,5 +57,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
+//parte websocket
+/*app.get('/',(req,res)=>{
+	res.render('ChatRoom')
+})*/
+
+
+
 
 module.exports = app;

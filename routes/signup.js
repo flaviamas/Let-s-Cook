@@ -3,6 +3,7 @@ var pgp = require('pg-promise')();
 var router = express.Router();
 var db = pgp("postgres://postgres:@localhost:5432/Letscook");
 //per farlo funzionare da ilaria aggiungere dopo il secondo postgres la password "admin"
+//per farlo funzionare da yuri aggiungere dopo il secondo postgres la password "meklord97"
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
