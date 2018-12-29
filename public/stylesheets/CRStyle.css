@@ -26,6 +26,7 @@ section#chatroom {
   width: 50%;
   overflow: auto;
   position: absolute;
+  text-align: left;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -37,7 +38,6 @@ a#scritta {
 }
 section#input_zone {
   height: 7%;
-  text-align: center;
   width: 50%;
   position: absolute;
   top: 78%;

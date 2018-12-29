@@ -5,7 +5,9 @@ html
     link(href='https://fonts.googleapis.com/css?family=Comfortaa', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/stylesheets/CRStyle.css')
     link(rel='stylesheet', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js')
+    script(src='https://code.jquery.com/jquery-latest.min.js')
+    script(src='/javascript/chat.js')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
     title ChatRoom
   body#body
@@ -28,5 +30,3 @@ html
     section#input_zone
       input#message.vertical-align(type='text')
       button#send_message.vertical-align(type='button',class='btn') Send
-    script(src='http://code.jquery.com/jquery-latest.min.js')
-    script(src='/javascript/chat.js')

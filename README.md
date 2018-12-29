@@ -2,6 +2,7 @@
 Progetto di reti di calcolatori e di Linguaggi e tecnologie per il web.
 Le tecnologie utilizzate sono:
 Node Js,Javascript, Css, Jade, HTML 5, JQuery, Postgres
+
 ## Istruzioni per la configurazione
 l'applicazione richiede i seguenti servizi:
 * nodejs per eseguire l'applicazione
