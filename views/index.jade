@@ -65,6 +65,7 @@ html.
         if(isLoggedIn){
           document.getElementById('logout').style.display='block';
           //document.getElementById('logout_login').style.display='block';
+          document.getElementById('chat').style.display='block';
           document.getElementById('profile').style.display='block';
           document.getElementById('fb-btn').style.display='none';
           document.getElementById('heading').style.display='none';
@@ -72,6 +73,7 @@ html.
         }else{
           document.getElementById('logout').style.display='none';
           //document.getElementById('logout_login').style.display='none';
+          document.getElementById('chat').style.display='none';
           document.getElementById('profile').style.display='none';
           document.getElementById('fb-btn').style.display='block';
           document.getElementById('heading').style.display='block';
@@ -108,7 +110,7 @@ html.
             <a href="AboutUs" class="nav-link active">About Us</a>
           </li>
           <li class="nav-item">
-            <a href="ChatRoom" class="nav-link active">Chat</a>
+            <a id="chat" href="ChatRoom" class="nav-link active">Chat</a>
           </li>
           <li class="nav-item"><a href="SignUp" class="nav-link active">Sign Up</a></li>
           <li class="dropdown">
