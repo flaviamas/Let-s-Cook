@@ -30,17 +30,27 @@ La pagina iniziale contiene il nome del sito, le pagine con le informazioni rigu
 
 ![immagine1](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/SchermataPrincipale.png)
 
-Per effettuare l'accesso bisogna premere il pulsantre login sulla navbar del sito, inserire nome, email o nomero di telefono di Facebook e la password. In alto a destra sulla navbar comparirà il nome dell'utente mentre a sinistra il pulsante chat.
+Per effettuare l'accesso bisogna premere il pulsantre login sulla navbar del sito, inserire nome, email o nomero di telefono di Facebook e la password. 
 
-## **Richerca e risultato**
+![immagine1.2](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/SchermataLogin.png)
 
-![immagine2](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/risultatiRicerca.png)
+In alto a destra sulla navbar comparirà il nome dell'utente mentre a sinistra il pulsante chat.
 
-Dopo aver inserito la ricetta da cercare, viene mostrata la pagina dei riultati trovati. Sotto ogni immagine viene mostrato anche il link di reindirizzamento per trovare la ricetta.
+## **Richerca**
+
+ ![immagine2](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/errorSearch.png)
+
+ La pagina di ricerca ha un asemplice barra per la ricerca. Nel caso in cui la ricerca della ricetta inserita non mostri risultati, comparirà una pagina di erorre. poi schiacciando il tasto back si tornerà alla ricerca.
+
+## **Risultato**
+
+![immagine3](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/risultatiRicerca.png)
+
+Dopo aver inserito la ricetta da cercare,se la ricerca va a buon fine, viene mostrata la pagina dei riultati trovati. Sotto ogni immagine del piatto è inserito anche il link di reindirizzamento per trovare la ricetta.
 
 ## **Chat**
 
-![immagine3](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/chatRoom.png)
+![immagine4](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/chatRoom.png)
 
 La pagina della chat presenta una barra iniziale per inserire il nome che comparirà nella chat, una schermata centrale in cui compaiono i messaggi e una barra in basso in cui viene scritto il messaggio da inviare.
 
