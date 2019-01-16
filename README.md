@@ -27,12 +27,21 @@ Per poter accedere alla Chat implementata attraverso WebSocket è necessario far
 La pagina iniziale contiene il nome del sito, le pagine con le informazioni riguardanti il sito, le due card  food e cocktails che mandano alle rispettive pagine di ricerca e il bottone per effettuare il login tramite Facebook. Nel momento in cui viene effettuato l'accesso, compare il nome dell'utente e il pulsante Chat.
 
 ## **SignIn**
+
+Let-s-Cook/public/images/SchermataPrimcipale.png
+
 Per effettuare l'accesso bisogna premere il pulsantre login sulla navbar del sito, inserire nome, email o nomero di telefono di Facebook e la password. In alto a destra sulla navbar comparirà il nome dell'utente.
 
 ## **Richerca e risultato**
+
+Let-s-Cook/public/images/risultatiRicerca.png
+
 Dopo aver inserito la ricetta da cercare, viene mostrata la pagina dei riultati trovati. Sotto gni immagine viene mostrato anche il link di reindirizzamento per trovare la ricetta.
 
 ## **Chat**
+
+Let-s-Cook/public/images/chatRoom.png
+
 La pagina della chat presenta una barra iniziale per inserire il nome che comparirà nella chat, una schermata centrale in cui compaiono i messaggi e una barra in basso in cui viene scritto il messaggio da inviare.
 
 
