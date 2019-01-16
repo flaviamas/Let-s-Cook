@@ -34,7 +34,7 @@ Per effettuare l'accesso bisogna premere il pulsantre login sulla navbar del sit
 
 ## **Richerca e risultato**
 
-Let-s-Cook/public/images/risultatiRicerca.png
+https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/risultatiRicerca.png
 
 Dopo aver inserito la ricetta da cercare, viene mostrata la pagina dei riultati trovati. Sotto gni immagine viene mostrato anche il link di reindirizzamento per trovare la ricetta.
 
