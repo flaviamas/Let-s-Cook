@@ -69,7 +69,6 @@ Le API utilizzate sono:
 - [Node.js](https://nodejs.org/it/)
 - [Express](https://expressjs.com/)
 - [Jade](https://pugjs.org/api/getting-started.html)
-- [Heroku](https://www.heroku.com/)
 - [Socket.io](https://socket.io/)
 - [Bootstrap](https://getbootstrap.com/)
 
