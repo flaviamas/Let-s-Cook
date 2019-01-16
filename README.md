@@ -62,7 +62,7 @@ Le API utilizzate sono:
 - [Edamam](https://developer.edamam.com/edamam-recipe-api)
 - [The Cocktail DB](https://www.thecocktaildb.com/api.php)
 - [Facebook API](https://developers.facebook.com/?locale=it_IT)
-- [Google Drive API](https://developers.google.com/drive/)
+
 
 ## Tecnologie usate
 
