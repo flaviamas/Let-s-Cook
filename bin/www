@@ -109,20 +109,17 @@ io.on('connection', (socket) => {
 	console.log('New user connected')
 	
 	//default username
-	socket.username="Anonymous"
+	socket.username="User"
 	
 	//listen on change_username
 	socket.on('change_username', (data) => {
 		socket.username = data.username
 	})
-	//listen o a new message
+	//listen on a new message
 	socket.on('new_message',(data) =>{
 		//broadcast the new message
 		io.sockets.emit('new_message', {message:data.message , username: socket.username});
   })
-  
-
-		
 
 })
 

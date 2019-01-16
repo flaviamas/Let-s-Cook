@@ -27,4 +27,5 @@ $(function() {
     console.log(username.val());
     socket.emit("change_username", { username: username.val() });
   });
+
 });
