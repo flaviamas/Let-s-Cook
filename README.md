@@ -30,13 +30,13 @@ La pagina iniziale contiene il nome del sito, le pagine con le informazioni rigu
 
 https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/SchermataPrincipale.png
 
-Per effettuare l'accesso bisogna premere il pulsantre login sulla navbar del sito, inserire nome, email o nomero di telefono di Facebook e la password. In alto a destra sulla navbar comparirà il nome dell'utente.
+Per effettuare l'accesso bisogna premere il pulsantre login sulla navbar del sito, inserire nome, email o nomero di telefono di Facebook e la password. In alto a destra sulla navbar comparirà il nome dell'utente mentre a sinistra il pulsante chat.
 
 ## **Richerca e risultato**
 
 https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/risultatiRicerca.png
 
-Dopo aver inserito la ricetta da cercare, viene mostrata la pagina dei riultati trovati. Sotto gni immagine viene mostrato anche il link di reindirizzamento per trovare la ricetta.
+Dopo aver inserito la ricetta da cercare, viene mostrata la pagina dei riultati trovati. Sotto ogni immagine viene mostrato anche il link di reindirizzamento per trovare la ricetta.
 
 ## **Chat**
 
