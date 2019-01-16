@@ -28,19 +28,19 @@ La pagina iniziale contiene il nome del sito, le pagine con le informazioni rigu
 
 ## **SignIn**
 
-https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/SchermataPrincipale.png
+![immagine1](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/SchermataPrincipale.png)
 
 Per effettuare l'accesso bisogna premere il pulsantre login sulla navbar del sito, inserire nome, email o nomero di telefono di Facebook e la password. In alto a destra sulla navbar comparirà il nome dell'utente mentre a sinistra il pulsante chat.
 
 ## **Richerca e risultato**
 
-https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/risultatiRicerca.png
+![immagine2](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/risultatiRicerca.png)
 
 Dopo aver inserito la ricetta da cercare, viene mostrata la pagina dei riultati trovati. Sotto ogni immagine viene mostrato anche il link di reindirizzamento per trovare la ricetta.
 
 ## **Chat**
 
-https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/chatRoom.png
+![immagine3](https://github.com/flaviamas/Let-s-Cook/blob/master/public/images/chatRoom.png)
 
 La pagina della chat presenta una barra iniziale per inserire il nome che comparirà nella chat, una schermata centrale in cui compaiono i messaggi e una barra in basso in cui viene scritto il messaggio da inviare.
 
