@@ -2,10 +2,9 @@ var express = require("express");
 var router = express.Router();
 const request = require("request");
 
-
 /* GET search page. */
 router.get("/", function(req, res, next) {
-  res.render("searchCocktail", { title: "Express" }); //mostra una pagina HTML, cerca search nella /views e lo mostra
+  res.render("searchCocktail", { title: "Express" });
 });
 
 router.post("/", function(req, res) {
@@ -18,11 +17,30 @@ router.post("/", function(req, res) {
         error: "error, try with another ingredient"
       });
     } else {
-     
       let fileJson = JSON.parse(body);
-      
-      res.render("resultscocktail", { jsonfile: fileJson },);
-      //res.json(fileJson); //vede se la richiesta è andata a buon fine, res.render fa il rendere, res.json fa il render del json
+      res.render("resultscocktail", { jsonfile: fileJson });
+    }
+  });
+});
+
+router.get("/json=:cocktail", function(req, res) {
+  let url =
+    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" +
+    req.params.cocktail;
+  request(url, function(err, response, body) {
+    if (err) {
+      res.json("search", {
+        recipe: null,
+        error: "error, try with another ingredient"
+      });
+    } else {
+      let fileJson = JSON.parse(body);
+      let flag = fileJson["drinks"];
+      if (flag == null) {
+        res.status(400);
+        return res.json({});
+      }
+      res.json(fileJson);
     }
   });
 });
