@@ -22,7 +22,10 @@ html.
  
   <body data-gr-c-s-loaded="true">
     
-    <script>  //gestione autenticazione
+    <script> 
+    //GESTIONE AUTENTICAZIONE
+
+      //configurazione SDK 
       window.fbAsyncInit = function() {
         FB.init({
           appId            : '2187230971337859',
@@ -43,7 +46,8 @@ html.
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-
+      
+      //funzione di callback
       function statusChangeCallback(response){
         if(response.status==='connected'){
           console.log('Logged in and authenticated');
@@ -80,7 +84,8 @@ html.
           document.getElementById('welcome').style.display='none';
         }
       }
-
+      
+      //controllo logout
       function logout(){
         FB.logout(function(response){
           setElements(false);
