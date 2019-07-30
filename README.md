@@ -1,6 +1,6 @@
 # 🍝 Let's Cook
 
-## Progetto Reti di Calcolatori
+## Progetto Linguaggi e Tecnologie per il Web e Reti di Calcolatori
 
 Il progetto consiste nella realizzazione di un servizio REST accessibile via Web.
 
@@ -71,6 +71,7 @@ Le API utilizzate sono:
 - [Jade](https://pugjs.org/api/getting-started.html)
 - [Socket.io](https://socket.io/)
 - [Bootstrap](https://getbootstrap.com/)
+
 
 ## Endpoints
 
