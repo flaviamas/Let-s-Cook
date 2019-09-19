@@ -63,6 +63,7 @@ script.
   document.getElementById('fb-btn').style.display='none';
   document.getElementById('heading').style.display='none';
   document.getElementById('welcome').style.display='none';
+
   }else{
   document.getElementById('logout').style.display='none';
   //document.getElementById('logout_login').style.display='none';
@@ -77,6 +78,7 @@ script.
   function logout(){
   FB.logout(function(response){
   setElements(false);
+
   });
   }
   function testAPI() {
@@ -84,6 +86,7 @@ script.
   FB.api('/me?fields=name,email', function(response) {
   console.log('Successful login for: ' + response.name);
   document.getElementById('profile').innerHTML ='Welcome ' + response.name + ' thanks for logging in!';
+
   });
   }
 nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
@@ -108,7 +111,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
               .col-md-12
                 | Login via
                 .social-buttons
-                  a#logout.btn(href='#' onclick='logout()')  Logout 
+                  a#logout.btn(href='/' onclick='logout()')  Logout 
                   fb:login-button#fb-btn(scope='public_profile,email' onlogin='checkLoginState();')
                 .bottom.text-center
                   | New here? 
@@ -118,7 +121,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
     li.navbar-text.navbar-right
       #profile
       #heading(name='heading')  #{nome}
-      #welcome(name='welcome')   
+      #welcome(name='welcome') 
 .wrapper
   header.clearfix.centered
     .logo
@@ -130,7 +133,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
     card(data-image='/images/fichi.jpg')
       h1(slot='header') Food
   a(href='searchCocktail')
-    card(data-image='/images/drink2.jpg')
+    card(data-image='/images/coktailss.jpg')
       h1(slot='header') Cocktails
 .footer.container-lg.px-3.foot(role='contentinfo')
   .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light
