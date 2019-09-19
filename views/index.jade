@@ -1,197 +1,147 @@
-
-doctype html
-html. 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="theme-color" content="#e9967a" />
-    <meta name="description" content="This is a website about food and drinks recipes."/>
-    <meta name="keywords" content="food, drinks" />
-    <meta http-equiv="author" content="Flavia Masoni, Ilaria Ponzianelli, Yuri Munno" />
-    <meta http-equiv="content-language" content="en" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Croissant+One|Fredoka+One|Kavoon|Slabo+27px|Varela+Round" rel="stylesheet"> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"> </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" ></script>
-    <link rel="stylesheet" href="/stylesheets/index.css" />
-    <script src="/javascript/home.js"></script>
-    <title>Food and cocktails recipes</title>
-  </head>
- 
-  <body data-gr-c-s-loaded="true">
-    
-    <script> 
-    //GESTIONE AUTENTICAZIONE
-
-      //configurazione SDK 
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId            : '2187230971337859',
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v3.2'
-        });
-
-        FB.getLoginStatus(function(response){
-          statusChangeCallback(response);
-        });
-      };
-
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-      
-      //funzione di callback
-      function statusChangeCallback(response){
-        if(response.status==='connected'){
-          console.log('Logged in and authenticated');
-          setElements(true);
-          testAPI();
-        }else{
-          console.log('Not authenticated');
-          setElements(false);
-        }
-      }
-      
-      function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
-         });
-      }
-      
-      function setElements(isLoggedIn){
-        if(isLoggedIn){
-          document.getElementById('logout').style.display='block';
-          //document.getElementById('logout_login').style.display='block';
-          document.getElementById('chat').style.display='block';
-          document.getElementById('profile').style.display='block';
-          document.getElementById('fb-btn').style.display='none';
-          document.getElementById('heading').style.display='none';
-          document.getElementById('welcome').style.display='none';
-        }else{
-          document.getElementById('logout').style.display='none';
-          //document.getElementById('logout_login').style.display='none';
-          document.getElementById('chat').style.display='none';
-          document.getElementById('profile').style.display='none';
-          document.getElementById('fb-btn').style.display='block';
-          document.getElementById('heading').style.display='block';
-          document.getElementById('welcome').style.display='none';
-        }
-      }
-      
-      //controllo logout
-      function logout(){
-        FB.logout(function(response){
-          setElements(false);
-        });
-      }
-  
-      function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me?fields=name,email', function(response) {
-          console.log('Successful login for: ' + response.name);
-          document.getElementById('profile').innerHTML ='Welcome ' + response.name + ' thanks for logging in!';
-        });
-      }
-
-     
-    </script>
-
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-default">
-      <div class="navbar-brand">Let's Cook</div>
-      <button type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navbar NavDropdown" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-
-          <li class="nav-item">
-            <a href="AboutUs" class="nav-link active">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a id="chat" href="ChatRoom" class="nav-link active">Chat</a>
-          </li>
-          <li class="nav-item"><a href="SignUp" class="nav-link active">Sign Up</a></li>
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="nav-link">
-              SignIn<span class="caret"></span></a>
-            <ul id="login-dp" class="dropdown-menu">
-              <li>
-                <div class="row">
-                  <div class="col-md-12">
-                    Login via
-                    <div class="social-buttons">
-
-                     <a id="logout" href="#" class="btn" onclick="logout()"> Logout </a>
-                     <fb:login-button 
-                      id="fb-btn"
-                      scope="public_profile,email"
-                      onlogin="checkLoginState();">
-                     </fb:login-button>        
-                    
-                  </div>
-                  <div class="bottom text-center">
-                    New here? <a href="SignUp"><b>Join Us </b></a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="navbar-nav">
-        <li class="navbar-text navbar-right">
-          <div id="profile"></div>
-          <div id="heading" name="heading"> #{nome}</div>
-          <div id="welcome" name="welcome">  </div>
-        </li>
-      </div>
-    </nav>
-
-    <div class ='wrapper'>
-      <header class="clearfix centered">
-          <div class="logo">
-              <p> LET'S COOK
-                  <img src= '/images/noodles.png' class='imglogo'>
-              </p>
-          </div>
-      </header>
-      </div>
-    <div id="app" class="container">
-       <a href="search">
-       <card data-image="/images/fichi.jpg"> 
-         <h1 slot="header">Food</h1>
-      </card>
-      </a>
-      <a href="searchCocktail">
-       <card data-image="/images/drink2.jpg"> 
-         <h1 slot="header">Cocktails</h1>
-      </card>
-      </a>
-      </div>
-    <div role="contentinfo" class="footer container-lg px-3 foot">
-      <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light" >
-        <ul class="d-flex flex-wrap list-unstyled">
-          <li class="mr-3">
-            <span>© 2018 Let's cook</span>
-          </li>
-          <li class="mr-3"><a href="Privacy">Privacy</a></li>
-          <li class="mr-3"><a href="ContactUs">ContactUs</a></li>
-          <li><a href="AboutUs">AboutUs</a></li>
-        </ul>
-        <div class="d-flex flex-justify-center pb-6">
-          <span class="f6 text-gray-light"></span>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
-
-
-
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset='UTF-8')
+  meta(name='theme-color' content='#e9967a')
+  meta(name='description' content='This is a website about food and drinks recipes.')
+  meta(name='keywords' content='food, drinks')
+  meta(http-equiv='author' content='Flavia Masoni, Ilaria Ponzianelli, Yuri Munno')
+  meta(http-equiv='content-language' content='en')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+  script(src='https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css?family=Bangers|Croissant+One|Fredoka+One|Kavoon|Slabo+27px|Varela+Round|Crimson+Text|Dancing+Script|Domine|EB+Garamond|Lobster|Ruge+Boogie&display=swap' rel='stylesheet')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+  link(rel='stylesheet' href='/stylesheets/index.css')
+  script(src='/javascript/home.js')
+  title Food and cocktails recipes
+script.
+  //GESTIONE AUTENTICAZIONE
+  //configurazione SDK
+  window.fbAsyncInit = function() {
+  FB.init({
+  appId            : '2187230971337859',
+  autoLogAppEvents : true,
+  xfbml            : true,
+  version          : 'v3.2'
+  });
+  FB.getLoginStatus(function(response){
+  statusChangeCallback(response);
+  });
+  };
+  (function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  //funzione di callback
+  function statusChangeCallback(response){
+  if(response.status==='connected'){
+  console.log('Logged in and authenticated');
+  setElements(true);
+  testAPI();
+  }else{
+  console.log('Not authenticated');
+  setElements(false);
+  }
+  }
+  function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+  statusChangeCallback(response);
+  });
+  }
+  function setElements(isLoggedIn){
+  if(isLoggedIn){
+  document.getElementById('logout').style.display='block';
+  //document.getElementById('logout_login').style.display='block';
+  document.getElementById('chat').style.display='block';
+  document.getElementById('profile').style.display='block';
+  document.getElementById('fb-btn').style.display='none';
+  document.getElementById('heading').style.display='none';
+  document.getElementById('welcome').style.display='none';
+  }else{
+  document.getElementById('logout').style.display='none';
+  //document.getElementById('logout_login').style.display='none';
+  document.getElementById('chat').style.display='none';
+  document.getElementById('profile').style.display='none';
+  document.getElementById('fb-btn').style.display='block';
+  document.getElementById('heading').style.display='block';
+  document.getElementById('welcome').style.display='none';
+  }
+  }
+  //controllo logout
+  function logout(){
+  FB.logout(function(response){
+  setElements(false);
+  });
+  }
+  function testAPI() {
+  console.log('Welcome!  Fetching your information.... ');
+  FB.api('/me?fields=name,email', function(response) {
+  console.log('Successful login for: ' + response.name);
+  document.getElementById('profile').innerHTML ='Welcome ' + response.name + ' thanks for logging in!';
+  });
+  }
+nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
+  .navbar-brand Let&apos;s Cook
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  .collapse.navbar-collapse(id='navbar NavDropdown')
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link.active(href='AboutUs') About Us
+      li.nav-item
+        a#chat.nav-link.active(href='ChatRoom') Chat
+      li.nav-item
+        a.nav-link.active(href='SignUp') Sign Up
+      li.dropdown
+        a.nav-link(href='#' data-toggle='dropdown')
+          | SignIn
+          span.caret
+        ul#login-dp.dropdown-menu
+          li
+            .row
+              .col-md-12
+                | Login via
+                .social-buttons
+                  a#logout.btn(href='#' onclick='logout()')  Logout 
+                  fb:login-button#fb-btn(scope='public_profile,email' onlogin='checkLoginState();')
+                .bottom.text-center
+                  | New here? 
+                  a(href='SignUp')
+                    b Join Us 
+  .navbar-nav
+    li.navbar-text.navbar-right
+      #profile
+      #heading(name='heading')  #{nome}
+      #welcome(name='welcome')   
+.wrapper
+  header.clearfix.centered
+    .logo
+      p
+        | LET&apos;S COOK
+        img.imglogo(src='/images/noodles.png')
+#app.container
+  a(href='search')
+    card(data-image='/images/fichi.jpg')
+      h1(slot='header') Food
+  a(href='searchCocktail')
+    card(data-image='/images/drink2.jpg')
+      h1(slot='header') Cocktails
+.footer.container-lg.px-3.foot(role='contentinfo')
+  .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light
+    ul.d-flex.flex-wrap.list-unstyled
+      li.mr-3
+        span &copy; 2018 Let&apos;s cook
+      li.mr-3
+        a(href='Privacy') Privacy
+      li.mr-3
+        a(href='ContactUs') ContactUs
+      li
+        a(href='AboutUs') AboutUs
+    .d-flex.flex-justify-center.pb-6
+      span.f6.text-gray-light

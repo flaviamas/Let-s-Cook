@@ -16,6 +16,12 @@ html
 
 
   body
+    script.
+      $(document).ready(function(){
+        $(".input-group").mouseenter(function(){
+          $(".name_field").css("background-color","orange");
+        });
+      });
     img(src="/images/arancia.jpg", class="bg")
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       a.navbar-brand Let's Cook

@@ -9,12 +9,12 @@ router.get("/", function(req, res, next) {
 });
 
 
-/*controllo campo login
+//controllo campo login
 router.post("/", function(req, res) {
   var email= req.body.email_login;
   var password=req.body.password_login;
   
-  /*metodo one significa che la funzione viene esguita una sola volta
+  //metodo one significa che la funzione viene esguita una sola volta
   var q1= db.one('SELECT * FROM utente where $1=utente.email and $2=psw',[email,password]).then(function(data){
     //stampa sul terminale i dati partendo dalla mail inserita
     let welcomestr="Welcome "+data.nome+ " thanks for logging in!";
@@ -28,8 +28,8 @@ router.post("/", function(req, res) {
     console.log("password entered is:",password)  
     console.log("LOGIN ERROR!!!!!!!!!!!!!")
     res.render("SignUp",);
-  });*/
-
+  });
+});
 
 
 module.exports = router;
