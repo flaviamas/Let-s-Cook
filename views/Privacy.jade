@@ -15,7 +15,13 @@ html
     link(rel="stylesheet", href="/stylesheets/Privacy.css")
     title Privacy
 
+  script.
+    - $(document).ready(function(){
+      $("button.btn.btn-primary").click(function(){
+        $("h3.testo").toggle();
 
+           });
+        });
   body
     //immagine di sfondo
  
@@ -41,6 +47,8 @@ html
             | Thanks for entrusting Let's cook with your recipes and your personal information.
             br
             br
+          button.btn.btn-primary(type="button") Open The complete Privacy
+          h3(class="testo")
             | We only collect the information you choose to give us, and we process it with your consent,
             | or on another legal basis; we only require the minimum amount of personal information that is necessary 
             | to fulfill the purpose of your interaction with us; we don't sell it to third parties; 
@@ -50,6 +58,7 @@ html
             br
             br
             br
+
 
     .footer.container-lg.px-3(role='contentinfo',class = 'foot')
       .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light
