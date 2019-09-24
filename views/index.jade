@@ -103,7 +103,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
         a.nav-link.active(href='SignUp') Sign Up
       li.dropdown
         a.nav-link(href='#' data-toggle='dropdown')
-          | SignIn
+          | Login
           span.caret
         ul#login-dp.dropdown-menu
           li
@@ -113,10 +113,23 @@ nav.navbar.navbar-expand-lg.navbar-dark.navbar-default
                 .social-buttons
                   a#logout.btn(href='/' onclick='logout()')  Logout 
                   fb:login-button#fb-btn(scope='public_profile,email' onlogin='checkLoginState();')
-                .bottom.text-center
+            .row
+              .col-md-6.col-md-offset-3
+                form(method='POST' action='/')
+                  div.form-group
+                    label(for='email') Email
+                    input.form-control(type='text' id='email_login' placeholder='email' name='email_login')
+                  div.form-group
+                    label(for='password') Password
+                    input.form-control(type='password' id='password_login' placeholder='password' name='password_login')
+                  button.btn.btn-primary(type='submit') Log in
+            .bottom.text-center
                   | New here? 
                   a(href='SignUp')
-                    b Join Us 
+                    b Join Us
+
+
+     
   .navbar-nav
     li.navbar-text.navbar-right
       #profile
