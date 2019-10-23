@@ -12,7 +12,13 @@ html
 
     link(rel="stylesheet", href="/stylesheets/AboutUs.css")
     title AboutUs
-
+  script.
+    -$(document).ready(function(){
+      $("div#bios").hide()
+      $("button.btn").click(function(){
+        $("div#bios").show();
+      })
+    })
   body
     img(src="/images/fragole.jpg", class="bg")
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
@@ -29,13 +35,9 @@ html
     .row
       .col-md-5
       .col-md-7
-        h2  ABOUT US: 
-        br
-        h3
-          | This is a project created by Flavia Masoni, Ilaria Ponzianelli and Yuri Munno.
-          br
-          |         It is about the realization of a web page for searching food and cocktails recipes.
-          |         Users can talk about their favourite recipes using a chat.
+        button.btn.btn-secondary(type="button") wanna know more about us?
+        div(id="bios") Il nostro progetto è ecosostenibile 
+
 
     .footer.container-lg.px-3(role='contentinfo',class = 'foot' )
       .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light

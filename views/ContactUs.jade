@@ -12,7 +12,15 @@ html
 
     link(rel="stylesheet", href="/stylesheets/ContactUs.css")
     title ContactUs
-
+   script.
+   -$(document).ready(function(){
+       $("h2").hide();
+       $("button.btn").click(function(){
+           var pep = $(this).attr("id");
+           console.log(pep)
+           $("h2."+pep).toggle();
+       })
+   })
   body
     img(src="/images/Coltello.jpg", class="bg")
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
@@ -23,7 +31,7 @@ html
             ul.navbar-nav
               li.nav-item.active
                 a.nav-link(href='/') Home
-                
+    
     .container
         .row
             .col-md-1
@@ -38,14 +46,22 @@ html
                 .row
                     .col-md-1
                     .col-md-2
-                        h2 flavia.masoni@gmail.com
-                    .col-md-4
+                        button.btn(type="button" id="f") Show/Hide Flavia's email
+                        h2.f flavia.masoni@gmail.com
+                br
+                br
+                .row
+                    .col-md-1
                     .col-md-2
-                        h2 i.ponzianelli@gmail.com
+                        button.btn(type="button" id="i") Show/Hide Ilaria's email
+                        h2.i i.ponzianelli@gmail.com
+                br
+                br
                 .row 
-                    .col-md-4
-                    .col-md-6
-                        h2 yuri.munno@gmail.com
+                    .col-md-1
+                    .col-md-2
+                        button.btn(type="button" id="y") Show/Hide Yuri's email
+                        h2.y yuri.munno@gmail.com
 
     .footer.container-lg.px-3(role='contentinfo',class = 'foot')
         .position-relative.d-flex.flex-justify-between.pt-6.pb-2.mt-6.f6.text-gray.border-top.border-gray-light

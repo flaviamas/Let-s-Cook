@@ -17,6 +17,7 @@ html
 
   script.
     - $(document).ready(function(){
+      $("h3.testo").hide();
       $("button.btn.btn-primary").click(function(){
         $("h3.testo").toggle();
 
@@ -47,7 +48,7 @@ html
             | Thanks for entrusting Let's cook with your recipes and your personal information.
             br
             br
-          button.btn.btn-primary(type="button") Open The complete Privacy
+          button.btn.btn-primary(type="button") Click here for the complete Privacy
           h3(class="testo")
             | We only collect the information you choose to give us, and we process it with your consent,
             | or on another legal basis; we only require the minimum amount of personal information that is necessary 
